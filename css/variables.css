@@ -1,0 +1,82 @@
+/* ==========================================================
+   Design tokens · Dr. Márcio Crisanto
+   Paleta extraída da logo: grafite #3B3F3F, teal #5AAAAA, bege #C9C8AF
+   ========================================================== */
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../assets/fonts/cormorant-garamond-latin.woff2') format('woff2');
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/inter-latin.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Cores da marca */
+  --graphite: #3B3F3F;
+  --graphite-900: #2A2D2D;
+  --teal: #5AAAAA;          /* teal da logo e do fundo da foto (decorativo, não usar para texto em fundo claro) */
+  --teal-700: #2A6767;      /* teal acessível: texto e botões (6.5:1 com branco) */
+  --teal-800: #1F5252;
+  --beige: #C9C8AF;
+
+  /* Texto */
+  --ink: #1F2424;
+  --ink-muted: #4A5252;
+  --on-dark: #FFFFFF;
+  --on-dark-muted: #D6DADA;
+
+  /* Rampa de fundo das seções: um só tom (o teal da logo), do mais claro ao mais escuro.
+     Cada seção é um degrau visível, sem degradê, para o paciente perceber a troca. */
+  --s1: #F5FAFA;   /* hero */
+  --s2: #E4F1F0;   /* o que tratamos */
+  --s3: #D1E7E6;   /* como é o cuidado */
+  --s4: #BCDCDB;   /* sobre */
+  --s5: #A5D0CF;   /* congressos */
+  --s6: #86BFBE;   /* dúvidas */
+  --s7: #5AAAAA;   /* agendamento (teal da logo) */
+  --s8: #3B3F3F;   /* rodapé (grafite da logo) */
+
+  --surface: #FFFFFF;
+  --line: rgba(31, 36, 36, 0.12);
+  --send: #1F5252;          /* botão final de envio (sem verde, segue a paleta da marca) */
+  --warn: #8A5A12;
+
+  /* Tipografia */
+  --font-primary: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Cormorant Garamond', 'Times New Roman', Georgia, serif;
+
+  --fs-sm: 0.875rem;
+  --fs-base: 1.0625rem;
+  --fs-md: 1.1875rem;
+  --fs-lg: clamp(1.35rem, 1.1rem + 1vw, 1.65rem);
+  --fs-xl: clamp(2rem, 1.5rem + 2.2vw, 3rem);
+  --fs-hero: clamp(2.4rem, 1.6rem + 3vw, 3.6rem);
+
+  /* Espaçamentos */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  --section-pad: clamp(2.75rem, 2rem + 2.5vw, 4.25rem);
+
+  /* Bordas e sombras */
+  --radius-sm: 8px;
+  --border-radius: 14px;
+  --radius-lg: 22px;
+  --shadow: 0 2px 8px rgba(31, 36, 36, 0.08);
+  --shadow-lg: 0 18px 40px -18px rgba(31, 36, 36, 0.35);
+
+  --container: 1180px;
+  --header-h: 72px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

@@ -1,0 +1,2 @@
+Salve aqui as fotos dos congressos (ex.: sbot-2025.webp, 800x600).
+Como encaixar no card: veja o comentario acima da secao de congressos no index.html.

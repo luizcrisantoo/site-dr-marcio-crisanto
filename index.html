@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--
+    Headers de segurança (configurar no servidor / netlify.toml / _headers):
+    Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; frame-src https://www.google.com; base-uri 'self'; form-action 'self'
+    X-Frame-Options: DENY
+    X-Content-Type-Options: nosniff
+    Referrer-Policy: strict-origin-when-cross-origin
+    Permissions-Policy: camera=(), microphone=(), geolocation=()
+  -->
+  <title>Ortopedista de Coluna em Recife | Dr. Márcio Crisanto</title>
+  <meta name="description" content="Ortopedista de coluna em Recife, Olinda e Cabo de Santo Agostinho: hérnia de disco, dor lombar e ciática. Dr. Márcio Crisanto, CRM-PE 12253.">
+  <link rel="canonical" href="https://drmarciocrisanto.com.br/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#3B3F3F">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dr. Márcio Crisanto">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Dr. Márcio Crisanto | Ortopedia de Coluna em Recife e Olinda">
+  <meta property="og:description" content="Médico ortopedista com atuação em coluna há mais de 20 anos. Atende em Boa Viagem, Paissandu, Olinda e Cabo de Santo Agostinho. Agende pelo WhatsApp.">
+  <meta property="og:image" content="https://drmarciocrisanto.com.br/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://drmarciocrisanto.com.br/">
+  <meta property="og:image:alt" content="Dr. Márcio Crisanto, ortopedista de coluna em Recife e Olinda">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="geo.region" content="BR-PE">
+  <meta name="geo.placename" content="Recife">
+  <meta name="geo.position" content="-8.1314;-34.9030">
+  <meta name="ICBM" content="-8.1314, -34.9030">
+
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="assets/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="assets/images/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=7">
+
+  <!-- Google Analytics 4: substituir G-XXXXXXXXXX pelo ID em analytics.google.com (e liberar googletagmanager.com na CSP) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script src="js/gtag-init.js"></script>
+  -->
+  <!-- Google Search Console: verificação por meta tag; pegar em search.google.com/search-console -->
+  <!-- <meta name="google-site-verification" content="CODIGO"> -->
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Physician",
+      "@id": "https://drmarciocrisanto.com.br/#medico",
+      "name": "Dr. Márcio Crisanto",
+      "alternateName": "Marcio Adriano Paiva Crisanto",
+      "description": "Médico ortopedista com atuação em coluna vertebral em Recife, Olinda e Cabo de Santo Agostinho.",
+      "url": "https://drmarciocrisanto.com.br/",
+      "image": "https://drmarciocrisanto.com.br/assets/images/dr-marcio-crisanto.jpg",
+      "medicalSpecialty": "https://schema.org/Musculoskeletal",
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "CRM-PE",
+          "value": "12253"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "RQE",
+          "value": "9294"
+        }
+      ],
+      "areaServed": [
+        "Recife",
+        "Olinda",
+        "Cabo de Santo Agostinho",
+        "Região Metropolitana do Recife"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/drmarciocrisanto/"
+      ],
+      "location": [
+        {
+          "@id": "https://drmarciocrisanto.com.br/#ortoclinica-boa-viagem"
+        },
+        {
+          "@id": "https://drmarciocrisanto.com.br/#cobv"
+        },
+        {
+          "@id": "https://drmarciocrisanto.com.br/#clifor"
+        },
+        {
+          "@id": "https://drmarciocrisanto.com.br/#maxiclinicas"
+        },
+        {
+          "@id": "https://drmarciocrisanto.com.br/#clinica-saude-cabo"
+        },
+        {
+          "@id": "https://drmarciocrisanto.com.br/#hospital-sao-sebastiao"
+        }
+      ],
+      "jobTitle": "Médico ortopedista",
+      "knowsAbout": [
+        "Hérnia de disco",
+        "Dor lombar",
+        "Dor cervical",
+        "Dor ciática",
+        "Estenose do canal vertebral",
+        "Escoliose",
+        "Artrose da coluna",
+        "Fraturas vertebrais",
+        "Cirurgia de coluna"
+      ],
+      "telephone": "+558121291402",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidade de Pernambuco (UPE)"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidade Federal de Pernambuco (UFPE)"
+        }
+      ]
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://drmarciocrisanto.com.br/#ortoclinica-boa-viagem",
+      "name": "Ortoclínica Boa Viagem",
+      "telephone": "+558121291402",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Visconde de Jequitinhonha, 1144, 4º andar, salas 402 a 404 (Boa Viagem Medical Center / Hospital Alfa)",
+        "addressLocality": "Recife",
+        "addressRegion": "PE",
+        "postalCode": "51030-020",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -8.1314338,
+        "longitude": -34.9030214
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://drmarciocrisanto.com.br/#cobv",
+      "name": "Clínica de Ortopedia de Boa Viagem",
+      "telephone": "+558139746797",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Conselheiro Aguiar, 1733",
+        "addressLocality": "Recife",
+        "addressRegion": "PE",
+        "postalCode": "51111-011",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -8.10539,
+        "longitude": -34.88856
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://drmarciocrisanto.com.br/#clifor",
+      "name": "Clifor - Clínica de Fraturas, Ortopedia e Reabilitação de Pernambuco",
+      "telephone": "+558134296165",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Praça Doze de Março, 36, sala 01",
+        "addressLocality": "Olinda",
+        "addressRegion": "PE",
+        "postalCode": "53030-110",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -8.00863,
+        "longitude": -34.84389
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://drmarciocrisanto.com.br/#maxiclinicas",
+      "name": "Maxiclínicas São Marcos - Unidade Paissandu",
+      "telephone": "+558130033230",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Pacífico dos Santos, 103",
+        "addressLocality": "Recife",
+        "addressRegion": "PE",
+        "postalCode": "52010-030",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -8.06296,
+        "longitude": -34.9
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://drmarciocrisanto.com.br/#clinica-saude-cabo",
+      "name": "Clínica de Saúde do Cabo",
+      "telephone": "+558135181525",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Presidente Getúlio Vargas, 974",
+        "addressLocality": "Cabo de Santo Agostinho",
+        "addressRegion": "PE",
+        "postalCode": "54505-560",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@type": "Hospital",
+      "@id": "https://drmarciocrisanto.com.br/#hospital-sao-sebastiao",
+      "name": "Hospital São Sebastião",
+      "telephone": "+558135124150",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Presidente Getúlio Vargas, 864",
+        "addressLocality": "Cabo de Santo Agostinho",
+        "addressRegion": "PE",
+        "addressCountry": "BR"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://drmarciocrisanto.com.br/#duvidas",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "O Dr. Márcio atende pelo meu plano de saúde?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Os planos aceitos variam de acordo com a unidade. Na seção de agendamento você vê a lista de cada local e pode informar o seu plano na mensagem, para a recepção confirmar a cobertura."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Toda dor na coluna precisa de cirurgia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. A maioria dos casos melhora com tratamento conservador, como medicação, fisioterapia e mudanças na rotina. A cirurgia é considerada em situações específicas, e a decisão é sempre conversada com o paciente."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O que devo levar na primeira consulta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Documento com foto, carteirinha do plano (se for por convênio), exames de imagem anteriores com os laudos e a lista dos remédios que você usa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso de encaminhamento de outro médico?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Para consulta particular, não. Alguns planos pedem guia ou encaminhamento; a recepção da unidade informa na hora do agendamento."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Em qual unidade devo marcar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Na que for mais prática para você e que aceite o seu plano. São duas em Boa Viagem, uma no Paissandu, uma em Olinda e duas no Cabo de Santo Agostinho. Use o filtro por região para ver só as mais próximas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "E se eu estiver com uma dor muito forte agora?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As consultas são agendadas. Se houver perda de força, alteração no controle da urina ou das fezes, ou dor forte depois de queda ou acidente, procure um pronto-atendimento."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://drmarciocrisanto.com.br/#site",
+      "url": "https://drmarciocrisanto.com.br/",
+      "name": "Dr. Márcio Crisanto",
+      "inLanguage": "pt-BR",
+      "about": {
+        "@id": "https://drmarciocrisanto.com.br/#medico"
+      }
+    }
+  ]
+}
+  </script>
+  <script type="module" src="js/script.js?v=7"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="topo">
+    <div class="container header__inner">
+      <a class="brand" href="#topo" aria-label="Dr. Márcio Crisanto, página inicial">
+        <img class="brand__mark" src="assets/images/logo-mark.webp" alt="" width="29" height="41">
+        <span class="brand__text">
+          <span class="brand__name">Dr. Márcio Crisanto</span>
+          <span class="brand__tagline">Ortopedia de coluna</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="icon icon--menu" aria-hidden="true"></span>
+        <span class="visually-hidden">Abrir menu</span>
+      </button>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#tratamentos">O que tratamos</a></li>
+          <li><a class="nav__link" href="#cuidado">Como é o cuidado</a></li>
+          <li><a class="nav__link" href="#sobre">Sobre</a></li>
+          <li><a class="nav__link" href="#congressos">Congressos</a></li>
+          <li><a class="nav__link" href="#duvidas">Dúvidas</a></li>
+          <li><a class="btn btn--primary btn--sm nav__cta" href="#agendar">
+            <span class="icon icon--calendar" aria-hidden="true"></span>Agendar consulta</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- ============ HERO ============ -->
+    <section class="section section--1 hero" aria-labelledby="hero-titulo">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          
+          <div class="hero__id">
+            <img class="hero__avatar" src="assets/images/dr-marcio-crisanto-480.webp" alt="" width="60" height="60">
+            <p><strong>Dr. Márcio Crisanto</strong><span>Médico · Ortopedia e Traumatologia</span><span>CRM-PE 12253 · RQE 9294</span></p>
+          </div>
+          <h1 class="hero__title" id="hero-titulo">
+            <span class="eyebrow hero__eyebrow">Ortopedista de coluna em Recife, Olinda e Cabo</span>
+            <span class="hero__title-main">Cuidado com a sua coluna, do diagnóstico ao tratamento.</span>
+          </h1>
+          <p class="hero__lead">
+            Dor nas costas, no pescoço ou que desce para as pernas tem causa, e tem caminho.
+            O Dr. Márcio Crisanto atende há mais de 20 anos em Recife, Olinda e Cabo de Santo Agostinho, sempre explicando
+            cada etapa com clareza.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="#agendar">
+              <span class="icon icon--calendar" aria-hidden="true"></span>Agendar consulta
+            </a>
+            <a class="btn btn--ghost btn--lg" href="#locais-lista">
+              <span class="icon icon--marker" aria-hidden="true"></span>Ver locais de atendimento
+            </a>
+          </div>
+          <ul class="hero__facts" aria-label="Destaques">
+            <li><strong>+20 anos</strong><span>de ortopedia</span></li>
+            <li><strong>6 locais</strong><span>Recife, Olinda e Cabo</span></li>
+            <li><strong>Convênios</strong><span>e particular</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__art">
+          <div class="hero__frame">
+            <picture>
+              <source srcset="assets/images/dr-marcio-crisanto-480.webp 480w, assets/images/dr-marcio-crisanto.webp 697w" sizes="(min-width: 1024px) 460px, 80vw" type="image/webp">
+              <img class="hero__photo" src="assets/images/dr-marcio-crisanto.jpg" alt="Dr. Márcio Crisanto, de jaleco branco, sorrindo" width="697" height="697" fetchpriority="high">
+            </picture>
+            <span class="hero__strip" aria-hidden="true"></span>
+          </div>
+          <p class="hero__badge">
+            <span class="hero__badge-title">Médico · Ortopedia e Traumatologia</span>
+            <span>CRM-PE 12253 · RQE 9294</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ O QUE TRATAMOS ============ -->
+    <section class="section section--2" id="tratamentos" aria-labelledby="tratamentos-titulo">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">O que tratamos</p>
+          <h2 class="section__title" id="tratamentos-titulo">Problemas da coluna mais comuns no consultório</h2>
+          <p class="section__lead">Se você se reconhece em algum desses sintomas, uma avaliação ajuda a entender a causa e o que pode ser feito.</p>
+        </header>
+
+        <ul class="conditions">
+          <li class="condition">
+            <span class="icon-badge"><span class="icon icon--vertebra" aria-hidden="true"></span></span>
+            <h3 class="condition__title">Hérnia de disco</h3>
+            <p>Dor que irradia para o braço ou a perna, formigamento ou perda de força.</p>
+          </li>
+          <li class="condition">
+            <span class="icon-badge"><span class="icon icon--back-pain" aria-hidden="true"></span></span>
+            <h3 class="condition__title">Dor lombar</h3>
+            <p>Dor na parte baixa das costas, que aparece de repente ou se arrasta há meses.</p>
+          </li>
+          <li class="condition">
+            <span class="icon-badge"><span class="icon icon--neck" aria-hidden="true"></span></span>
+            <h3 class="condition__title">Dor cervical</h3>
+            <p>Dor e rigidez no pescoço, às vezes com dor de cabeça ou nos ombros.</p>
+          </li>
+          <li class="condition">
+            <span class="icon-badge"><span class="icon icon--leg-trauma" aria-hidden="true"></span></span>
+            <h3 class="condition__title">Dor ciática</h3>
+            <p>Dor em choque ou queimação que desce pela parte de trás da perna.</p>
+          </li>
+          <li class="condition">
+            <span class="icon-badge"><span class="icon icon--elderly-cane" aria-hidden="true"></span></span>
+            <h3 class="condition__title">Estenose do canal</h3>
+            <p>Cansaço e dor nas pernas ao caminhar, que aliviam quando você senta.</p>
+          </li>
+          <li class="condition">
+            <span class="icon-badge"><span class="icon icon--posture" aria-hidden="true"></span></span>
+            <h3 class="condition__title">Escoliose</h3>
+            <p>Desvio lateral da coluna, em crianças, adolescentes e adultos.</p>
+          </li>
+          <li class="condition">
+            <span class="icon-badge"><span class="icon icon--spine-segments" aria-hidden="true"></span></span>
+            <h3 class="condition__title">Artrose da coluna</h3>
+            <p>Desgaste das articulações da coluna, com dor e perda de mobilidade.</p>
+          </li>
+          <li class="condition">
+            <span class="icon-badge"><span class="icon icon--broken-bone" aria-hidden="true"></span></span>
+            <h3 class="condition__title">Fraturas vertebrais</h3>
+            <p>Após quedas, acidentes ou por osteoporose, com dor súbita nas costas.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ COMO É O CUIDADO ============ -->
+    <section class="section section--3" id="cuidado" aria-labelledby="cuidado-titulo">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Como é o cuidado</p>
+          <h2 class="section__title" id="cuidado-titulo">Você entende cada passo antes de decidir qualquer coisa</h2>
+          <p class="section__lead">Ter dor na coluna não significa precisar de cirurgia. O tratamento começa pelo diagnóstico e segue no ritmo do seu caso.</p>
+        </header>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step__num" aria-hidden="true">1</span>
+            <h3 class="step__title">Consulta e exame físico</h3>
+            <p>Conversa sobre a história da dor, rotina e limitações, seguida do exame da coluna e dos nervos.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">2</span>
+            <h3 class="step__title">Diagnóstico</h3>
+            <p>Quando necessário, exames de imagem como raio-X, tomografia ou ressonância, sempre explicados junto com você.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">3</span>
+            <h3 class="step__title">Tratamento conservador</h3>
+            <p>Medicação, fisioterapia, orientação postural e atividade física. Na maior parte dos casos, o tratamento começa por aqui.</p>
+          </li>
+          <li class="step">
+            <span class="step__num" aria-hidden="true">4</span>
+            <h3 class="step__title">Cirurgia, quando indicada</h3>
+            <p>Considerada quando o tratamento conservador não é suficiente ou há sinais de alerta. Benefícios e riscos são explicados antes da decisão.</p>
+          </li>
+        </ol>
+
+        <aside class="alert-box" aria-labelledby="alerta-titulo">
+          <span class="icon-badge icon-badge--warn"><span class="icon icon--info" aria-hidden="true"></span></span>
+          <div>
+            <h3 class="alert-box__title" id="alerta-titulo">Sinais de alerta: procure um pronto-atendimento</h3>
+            <ul class="alert-box__list">
+              <li>Perda de força nas pernas ou dificuldade para andar</li>
+              <li>Alteração no controle da urina ou das fezes</li>
+              <li>Dormência na região genital ou na parte interna das coxas</li>
+              <li>Dor forte depois de queda ou acidente</li>
+              <li>Dor nas costas com febre ou perda de peso sem explicação</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section section--4" id="sobre" aria-labelledby="sobre-titulo">
+      <div class="container about">
+        <div class="about__content">
+          <p class="eyebrow">Sobre o médico</p>
+          <h2 class="section__title" id="sobre-titulo">Dr. Márcio Crisanto</h2>
+          <p class="about__creds">Médico · Ortopedia e Traumatologia · CRM-PE 12253 · RQE 9294</p>
+          <p>
+            Formado em Medicina pela Universidade de Pernambuco (UPE), fez residência em Ortopedia e
+            Traumatologia e especialização em cirurgia de coluna no Hospital das Clínicas da UFPE.
+          </p>
+          <p>
+            Há mais de 20 anos dedica a carreira à ortopedia, com atuação voltada para a coluna vertebral.
+            Atende pacientes de toda a Região Metropolitana em Boa Viagem, no Paissandu, em Olinda e no
+            Cabo de Santo Agostinho.
+          </p>
+          <p>
+            Acompanha de perto a evolução da área, participando de congressos nacionais e internacionais
+            de ortopedia e de cirurgia da coluna, incluindo as técnicas minimamente invasivas.
+          </p>
+          <blockquote class="about__quote">
+            <p>“Há 20 anos ajudando pessoas por meio da ortopedia. Marido, pai e avô.”</p>
+          </blockquote>
+          <div class="about__social">
+            <a class="btn btn--ghost" href="https://www.instagram.com/drmarciocrisanto/" target="_blank" rel="noopener noreferrer">
+              <span class="icon icon--instagram" aria-hidden="true"></span>Siga no Instagram<span class="visually-hidden"> (abre em nova aba)</span></a>
+          </div>
+        </div>
+
+        <!-- Foto à direita: o médico olha para a esquerda, ou seja, para dentro da página -->
+        <figure class="about__media">
+          <picture>
+            <source srcset="assets/images/dr-marcio-crisanto-cirurgia-480.webp 480w, assets/images/dr-marcio-crisanto-cirurgia.webp 650w" sizes="(min-width: 1024px) 400px, 90vw" type="image/webp">
+            <img src="assets/images/dr-marcio-crisanto-cirurgia.jpg" alt="Dr. Márcio Crisanto no centro cirúrgico, de touca, máscara e avental, com a equipe ao fundo" width="650" height="812" loading="lazy">
+          </picture>
+          <img class="about__mark" src="assets/images/logo-mark.webp" alt="" width="58" height="82" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ CONGRESSOS ============ -->
+    <section class="section section--5" id="congressos" aria-labelledby="congressos-titulo">
+      <div class="container">
+        <header class="section__head">
+          <p class="eyebrow">Atualização contínua</p>
+          <h2 class="section__title" id="congressos-titulo">Congressos e cursos recentes</h2>
+          <p class="section__lead">A medicina da coluna evolui rápido. Estar nesses encontros é parte do cuidado com quem é atendido no consultório.</p>
+        </header>
+
+        <!--
+          Para adicionar foto em um card: incluir, como primeiro filho do <article>,
+          <img class="congress__photo" src="assets/images/congressos/NOME.webp" alt="..." width="800" height="600" loading="lazy">
+          e adicionar a classe "congress--photo" no <article>.
+        -->
+        <div class="congress-list">
+          <article class="congress">
+            <p class="congress__year">2026</p>
+            <p class="congress__tag">Curso</p>
+            <h3 class="congress__title">UBE Spine Weekend</h3>
+            <p class="congress__desc">Curso de endoscopia biportal da coluna, com cirurgias ao vivo e simuladores.</p>
+            <p class="congress__place"><span class="icon icon--marker" aria-hidden="true"></span>Goiânia (GO)</p>
+          </article>
+          <article class="congress">
+            <p class="congress__year">2025</p>
+            <p class="congress__tag">Nacional</p>
+            <h3 class="congress__title">57º Congresso Anual da SBOT</h3>
+            <p class="congress__desc">Congresso da Sociedade Brasileira de Ortopedia e Traumatologia.</p>
+            <p class="congress__place"><span class="icon icon--marker" aria-hidden="true"></span>Salvador (BA)</p>
+          </article>
+          <article class="congress">
+            <p class="congress__year">2025</p>
+            <p class="congress__tag">Internacional</p>
+            <h3 class="congress__title">VI World Congress of Endoscopic Spine Surgery &amp; MISS</h3>
+            <p class="congress__desc">Congresso mundial de cirurgia endoscópica e minimamente invasiva da coluna (WFSEC25).</p>
+            <p class="congress__place"><span class="icon icon--airplane" aria-hidden="true"></span>Bariloche, Argentina</p>
+          </article>
+          <article class="congress">
+            <p class="congress__year">2024</p>
+            <p class="congress__tag">Nacional</p>
+            <h3 class="congress__title">56º Congresso Brasileiro de Ortopedia e Traumatologia</h3>
+            <p class="congress__desc">Principal encontro anual da ortopedia brasileira, promovido pela SBOT.</p>
+            <p class="congress__place"><span class="icon icon--marker" aria-hidden="true"></span>Rio de Janeiro (RJ)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DÚVIDAS ============ -->
+    <section class="section section--6" id="duvidas" aria-labelledby="duvidas-titulo">
+      <div class="container container--narrow">
+        <header class="section__head">
+          <p class="eyebrow">Dúvidas frequentes</p>
+          <h2 class="section__title" id="duvidas-titulo">Antes de agendar</h2>
+        </header>
+
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__q">O Dr. Márcio atende pelo meu plano de saúde?</summary>
+            <div class="faq__a"><p>Os planos aceitos variam de acordo com a unidade. Na seção de agendamento você vê a lista de cada local e pode informar o seu plano na mensagem, para a recepção confirmar a cobertura.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Toda dor na coluna precisa de cirurgia?</summary>
+            <div class="faq__a"><p>Não. A maioria dos casos melhora com tratamento conservador, como medicação, fisioterapia e mudanças na rotina. A cirurgia é considerada em situações específicas, e a decisão é sempre conversada com o paciente.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">O que devo levar na primeira consulta?</summary>
+            <div class="faq__a"><p>Documento com foto, carteirinha do plano (se for por convênio), exames de imagem anteriores com os laudos e a lista dos remédios que você usa.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Preciso de encaminhamento de outro médico?</summary>
+            <div class="faq__a"><p>Para consulta particular, não. Alguns planos pedem guia ou encaminhamento; a recepção da unidade informa na hora do agendamento.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">Em qual unidade devo marcar?</summary>
+            <div class="faq__a"><p>Na que for mais prática para você e que aceite o seu plano. São duas em Boa Viagem, uma no Paissandu, uma em Olinda e duas no Cabo de Santo Agostinho. Use o filtro por região para ver só as mais próximas.</p></div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__q">E se eu estiver com uma dor muito forte agora?</summary>
+            <div class="faq__a"><p>As consultas são agendadas. Se houver perda de força, alteração no controle da urina ou das fezes, ou dor forte depois de queda ou acidente, procure um pronto-atendimento.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AGENDAMENTO ============ -->
+    <section class="section section--7 booking" id="agendar" aria-labelledby="agendar-titulo">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <p class="eyebrow eyebrow--dark">Agendamento</p>
+          <h2 class="section__title" id="agendar-titulo">Agende sua consulta em 3 passos</h2>
+          <p class="section__lead">Escolha o local, diga como será o atendimento e envie a mensagem. A recepção responde para confirmar dia e horário.</p>
+        </header>
+
+        <ol class="stepper" aria-label="Etapas do agendamento" data-stepper hidden>
+          <li class="stepper__item is-current" data-stepper-item="1"><span class="stepper__dot">1</span><span class="stepper__label">Local</span></li>
+          <li class="stepper__item" data-stepper-item="2"><span class="stepper__dot">2</span><span class="stepper__label">Atendimento</span></li>
+          <li class="stepper__item" data-stepper-item="3"><span class="stepper__dot">3</span><span class="stepper__label">Enviar</span></li>
+        </ol>
+
+        <div class="booking__panel" data-booking>
+
+          <!-- PASSO 1: LOCAL (funciona também sem JavaScript: cada card tem seus próprios botões) -->
+          <div class="booking__step" data-step="1" id="locais-lista">
+            <h3 class="booking__step-title"><span class="booking__step-num">1</span>Onde fica melhor para você?</h3>
+
+            <!-- Filtro por região (Lei de Hick: menos opções visíveis por vez). Exibido só com JavaScript. -->
+            <div class="region-filter" role="group" aria-label="Filtrar locais por região" data-region-filter hidden>
+              <button type="button" class="region-filter__btn" data-region-btn="todas" aria-pressed="true">Todas <span data-count></span></button>
+              <button type="button" class="region-filter__btn" data-region-btn="zona-sul" aria-pressed="false">Zona Sul <span data-count></span></button>
+              <button type="button" class="region-filter__btn" data-region-btn="zona-norte" aria-pressed="false">Zona Norte <span data-count></span></button>
+              <button type="button" class="region-filter__btn" data-region-btn="olinda" aria-pressed="false">Olinda <span data-count></span></button>
+              <button type="button" class="region-filter__btn" data-region-btn="cabo" aria-pressed="false">Cabo de Santo Agostinho <span data-count></span></button>
+            </div>
+
+            <div class="locations">
+              <!-- Ortoclínica Boa Viagem -->
+              <article class="location" data-location="ortoclinica" data-region="zona-sul" data-name="Ortoclínica Boa Viagem" data-whatsapp="5581991168831" data-phone="558121291402">
+                <div class="location__info">
+                  <p class="location__region">Zona Sul · Boa Viagem</p>
+                  <h4 class="location__name">Ortoclínica Boa Viagem</h4>
+                  <p class="location__line"><span class="icon icon--marker" aria-hidden="true"></span>
+                    <span>Boa Viagem Medical Center (Hospital Alfa)<br>Av. Visconde de Jequitinhonha, 1144, 4º andar, <span class="nowrap">salas 402 a 404</span><br>Boa Viagem, <span class="nowrap">Recife - PE</span>, <span class="nowrap">51030-020</span></span></p>
+                  <p class="location__line"><span class="icon icon--phone" aria-hidden="true"></span>
+                    <span><a href="tel:+558121291402">(81) 2129-1402</a> · <a href="tel:+558130769245">(81) 3076-9245</a></span></p>
+                  <p class="location__line location__line--how"><span class="icon icon--whatsapp" aria-hidden="true"></span>
+                    <span>Agenda pelo WhatsApp ou por telefone</span></p>
+                </div>
+                <div class="location__plans">
+                  <p class="location__plans-title">Particular e convênios</p>
+                  <ul class="chips" data-plans>
+                    <li class="chip" data-plan="particular">Particular</li>
+                    <li class="chip" data-plan="allianz">Allianz Saúde</li>
+                    <li class="chip" data-plan="amil">Amil</li>
+                    <li class="chip" data-plan="bradesco">Bradesco Saúde</li>
+                    <li class="chip" data-plan="cassi">Cassi</li>
+                    <li class="chip" data-plan="geap">Geap</li>
+                    <li class="chip" data-plan="golden">Golden Cross</li>
+                    <li class="chip" data-plan="correios">Postal Saúde</li>
+                    <li class="chip" data-plan="sulamerica">SulAmérica</li>
+                    <li class="chip" data-plan="unimed">Unimed</li>
+                  </ul>
+                </div>
+                <div class="location__actions">
+                  <a class="btn btn--primary btn--block" data-select-location href="https://wa.me/5581991168831?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20do%20Dr.%20M%C3%A1rcio%20Crisanto%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20ele%20na%20Ortocl%C3%ADnica%20Boa%20Viagem." target="_blank" rel="noopener noreferrer">
+                    <span class="icon icon--whatsapp" aria-hidden="true"></span>Agendar aqui</a>
+                  <a class="btn btn--quiet btn--block" href="https://www.google.com/maps/search/?api=1&amp;query=Ortocl%C3%ADnica%20Boa%20Viagem%2C%20Av.%20Visconde%20de%20Jequitinhonha%2C%201144%2C%20Recife" target="_blank" rel="noopener noreferrer">
+                    <span class="icon icon--map" aria-hidden="true"></span>Como chegar<span class="visually-hidden"> (abre em nova aba)</span></a>
+                </div>
+              </article>
+
+              <!-- Clínica de Ortopedia de Boa Viagem (sem WhatsApp confirmado: agendamento por telefone) -->
+              <article class="location" data-location="cobv" data-region="zona-sul" data-name="Clínica de Ortopedia de Boa Viagem" data-whatsapp="" data-phone="558139746797">
+                <div class="location__info">
+                  <p class="location__region">Zona Sul · Boa Viagem</p>
+                  <h4 class="location__name">Clínica de Ortopedia de Boa Viagem</h4>
+                  <p class="location__line"><span class="icon icon--marker" aria-hidden="true"></span>
+                    <span>Av. Conselheiro Aguiar, 1733<br>Boa Viagem<br><span class="nowrap">Recife - PE</span>, <span class="nowrap">51111-011</span></span></p>
+                  <p class="location__line"><span class="icon icon--phone" aria-hidden="true"></span>
+                    <span><a href="tel:+558139746797">(81) 3974-6797</a></span></p>
+                  <p class="location__line location__line--how"><span class="icon icon--phone" aria-hidden="true"></span>
+                    <span>Agenda somente por telefone</span></p>
+                </div>
+                <div class="location__plans">
+                  <p class="location__plans-title">Particular e convênios</p>
+                  <ul class="chips" data-plans>
+                    <li class="chip" data-plan="particular">Particular</li>
+                    <li class="chip" data-plan="amil">Amil</li>
+                    <li class="chip" data-plan="bradesco">Bradesco Saúde</li>
+                    <li class="chip" data-plan="cassi">Cassi</li>
+                    <li class="chip" data-plan="fachesf">Fachesf</li>
+                    <li class="chip" data-plan="geap">Geap</li>
+                    <li class="chip" data-plan="golden">Golden Cross</li>
+                    <li class="chip" data-plan="mediservice">Mediservice</li>
+                    <li class="chip" data-plan="correios">Postal Saúde</li>
+                    <li class="chip" data-plan="caixa">Saúde Caixa</li>
+                    <li class="chip" data-plan="sulamerica">SulAmérica</li>
+                    <li class="chip" data-plan="unimed">Unimed</li>
+                  </ul>
+                </div>
+                <div class="location__actions">
+                  <a class="btn btn--primary btn--block" data-select-location href="tel:+558139746797">
+                    <span class="icon icon--phone" aria-hidden="true"></span>Ligar para agendar</a>
+                  <a class="btn btn--quiet btn--block" href="https://www.google.com/maps/search/?api=1&amp;query=Cl%C3%ADnica%20de%20Ortopedia%20de%20Boa%20Viagem%2C%20Av.%20Conselheiro%20Aguiar%2C%201733%2C%20Recife" target="_blank" rel="noopener noreferrer">
+                    <span class="icon icon--map" aria-hidden="true"></span>Como chegar<span class="visually-hidden"> (abre em nova aba)</span></a>
+                </div>
+              </article>
+
+              <!-- Clifor Olinda -->
+              <article class="location" data-location="clifor" data-region="olinda" data-name="Clifor Olinda" data-whatsapp="5581982379160" data-phone="558134296165">
+                <div class="location__info">
+                  <p class="location__region">Olinda · Bairro Novo</p>
+                  <h4 class="location__name">Clifor</h4>
+                  <p class="location__sub">Clínica de Fraturas, Ortopedia e Reabilitação de Pernambuco</p>
+                  <p class="location__line"><span class="icon icon--marker" aria-hidden="true"></span>
+                    <span>Praça Doze de Março, 36, sala 01<br>Bairro Novo, <span class="nowrap">Olinda - PE</span>, <span class="nowrap">53030-110</span></span></p>
+                  <p class="location__line"><span class="icon icon--phone" aria-hidden="true"></span>
+                    <span><a href="tel:+558134296165">(81) 3429-6165</a></span></p>
+                  <p class="location__line location__line--how"><span class="icon icon--whatsapp" aria-hidden="true"></span>
+                    <span>Agenda pelo WhatsApp ou por telefone</span></p>
+                </div>
+                <div class="location__plans">
+                  <p class="location__plans-title">Particular e convênios</p>
+                  <ul class="chips" data-plans>
+                    <li class="chip" data-plan="particular">Particular</li>
+                    <li class="chip" data-plan="assefaz">Assefaz</li>
+                    <li class="chip" data-plan="bradesco">Bradesco Saúde</li>
+                    <li class="chip" data-plan="camed">Camed</li>
+                    <li class="chip" data-plan="capesesp">CapeSesp</li>
+                    <li class="chip" data-plan="cassi">Cassi</li>
+                    <li class="chip" data-plan="compesa">Compesa Saúde</li>
+                    <li class="chip" data-plan="fachesf">Fachesf</li>
+                    <li class="chip" data-plan="fisco">Fisco Saúde</li>
+                    <li class="chip" data-plan="geap">Geap</li>
+                    <li class="chip" data-plan="mediservice">Mediservice</li>
+                    <li class="chip" data-plan="correios">Postal Saúde</li>
+                    <li class="chip" data-plan="caixa">Saúde Caixa</li>
+                    <li class="chip" data-plan="sulamerica">SulAmérica</li>
+                    <li class="chip" data-plan="unimed">Unimed</li>
+                  </ul>
+                </div>
+                <div class="location__actions">
+                  <a class="btn btn--primary btn--block" data-select-location href="https://wa.me/5581982379160?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20do%20Dr.%20M%C3%A1rcio%20Crisanto%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20ele%20na%20Clifor%20Olinda." target="_blank" rel="noopener noreferrer">
+                    <span class="icon icon--whatsapp" aria-hidden="true"></span>Agendar aqui</a>
+                  <a class="btn btn--quiet btn--block" href="https://www.google.com/maps/search/?api=1&amp;query=Clifor%2C%20Pra%C3%A7a%20Doze%20de%20Mar%C3%A7o%2C%2036%2C%20Olinda" target="_blank" rel="noopener noreferrer">
+                    <span class="icon icon--map" aria-hidden="true"></span>Como chegar<span class="visually-hidden"> (abre em nova aba)</span></a>
+                </div>
+              </article>
+
+              <!-- Maxiclínicas São Marcos (Rede D'Or): WhatsApp é a assistente virtual nacional da rede -->
+              <article class="location" data-location="maxiclinicas" data-region="zona-norte" data-name="Maxiclínicas São Marcos (Paissandu)" data-whatsapp="" data-phone="558130033230" data-online="https://www.rededorsaoluiz.com.br/paciente/marcar-consulta/?medicom=70820806&amp;unidadem=2064">
+                <div class="location__info">
+                  <p class="location__region">Zona Norte · Paissandu</p>
+                  <h4 class="location__name">Maxiclínicas São Marcos</h4>
+                  <p class="location__sub">Rede D'Or · Unidade Paissandu</p>
+                  <p class="location__line"><span class="icon icon--marker" aria-hidden="true"></span>
+                    <span>Rua Pacífico dos Santos, 103<br>Paissandu, <span class="nowrap">Recife - PE</span>, <span class="nowrap">52010-030</span></span></p>
+                  <p class="location__line"><span class="icon icon--phone" aria-hidden="true"></span>
+                    <span>Central Rede D'Or <a href="tel:+558130033230">(81) 3003-3230</a></span></p>
+                  <p class="location__line location__line--how"><span class="icon icon--calendar" aria-hidden="true"></span>
+                    <span>Agenda online pela Rede D'Or ou pela central</span></p>
+                </div>
+                <div class="location__plans">
+                  <p class="location__plans-title">Convênios</p>
+                  <ul class="chips" data-plans>
+                    <li class="chip" data-plan="amil">Amil</li>
+                    <li class="chip" data-plan="assefaz">Assefaz</li>
+                    <li class="chip" data-plan="bradesco">Bradesco Saúde</li>
+                    <li class="chip" data-plan="gama">Gama Saúde</li>
+                    <li class="chip" data-plan="mediservice">Mediservice</li>
+                    <li class="chip" data-plan="sulamerica">SulAmérica</li>
+                  </ul>
+                </div>
+                <div class="location__actions">
+                  <a class="btn btn--primary btn--block" data-select-location href="https://www.rededorsaoluiz.com.br/paciente/marcar-consulta/?medicom=70820806&amp;unidadem=2064" target="_blank" rel="noopener noreferrer">
+                    <span class="icon icon--calendar" aria-hidden="true"></span>Agendar online</a>
+                  <a class="btn btn--quiet btn--block" href="https://www.google.com/maps/search/?api=1&amp;query=Maxicl%C3%ADnicas%20S%C3%A3o%20Marcos%2C%20Rua%20Pac%C3%ADfico%20dos%20Santos%2C%20103%2C%20Recife" target="_blank" rel="noopener noreferrer">
+                    <span class="icon icon--map" aria-hidden="true"></span>Como chegar<span class="visually-hidden"> (abre em nova aba)</span></a>
+                </div>
+              </article>
+              <!-- Clínica de Saúde do Cabo -->
+              <article class="location" data-location="cabo-clinica" data-region="cabo" data-name="Clínica de Saúde do Cabo" data-whatsapp="5581992166979" data-phone="558135181525">
+                <div class="location__info">
+                  <p class="location__region">Cabo de Santo Agostinho · Centro</p>
+                  <h4 class="location__name">Clínica de Saúde do Cabo</h4>
+                  <p class="location__line"><span class="icon icon--marker" aria-hidden="true"></span>
+                    <span>Av. Presidente Getúlio Vargas, 974<br>Centro, Cabo de Santo Agostinho - PE, <span class="nowrap">54505-560</span></span></p>
+                  <p class="location__line"><span class="icon icon--phone" aria-hidden="true"></span>
+                    <span><a href="tel:+558135181525">(81) 3518-1525</a></span></p>
+                  <p class="location__line location__line--how"><span class="icon icon--whatsapp" aria-hidden="true"></span>
+                    <span>Agenda pelo WhatsApp ou por telefone</span></p>
+                </div>
+                <div class="location__plans">
+                  <p class="location__plans-title">Particular e convênios</p>
+                  <ul class="chips" data-plans>
+                    <li class="chip" data-plan="particular">Particular</li>
+                    <li class="chip" data-plan="amil">Amil</li>
+                    <li class="chip" data-plan="bradesco">Bradesco Saúde</li>
+                    <li class="chip" data-plan="hapvida">Hapvida</li>
+                    <li class="chip" data-plan="porto">Porto Saúde</li>
+                    <li class="chip" data-plan="sulamerica">SulAmérica</li>
+                    <li class="chip" data-plan="unimed">Unimed</li>
+                  </ul>
+                </div>
+                <div class="location__actions">
+                  <a class="btn btn--primary btn--block" data-select-location href="https://wa.me/5581992166979?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20do%20Dr.%20M%C3%A1rcio%20Crisanto%20e%20gostaria%20de%20agendar%20uma%20consulta%20com%20ele%20na%20Cl%C3%ADnica%20de%20Sa%C3%BAde%20do%20Cabo." target="_blank" rel="noopener noreferrer">
+                    <span class="icon icon--whatsapp" aria-hidden="true"></span>Agendar aqui</a>
+                  <a class="btn btn--quiet btn--block" href="https://www.google.com/maps/search/?api=1&amp;query=Cl%C3%ADnica%20de%20Sa%C3%BAde%20do%20Cabo%2C%20Av.%20Presidente%20Get%C3%BAlio%20Vargas%2C%20974%2C%20Cabo%20de%20Santo%20Agostinho" target="_blank" rel="noopener noreferrer">
+                    <span class="icon icon--map" aria-hidden="true"></span>Como chegar<span class="visually-hidden"> (abre em nova aba)</span></a>
+                </div>
+              </article>
+              <!-- Hospital São Sebastião (Cabo) -->
+              <article class="location" data-location="cabo-hospital" data-region="cabo" data-name="Hospital São Sebastião (Cabo)" data-whatsapp="" data-phone="558135124150">
+                <div class="location__info">
+                  <p class="location__region">Cabo de Santo Agostinho</p>
+                  <h4 class="location__name">Hospital São Sebastião</h4>
+                  <p class="location__line"><span class="icon icon--marker" aria-hidden="true"></span>
+                    <span>Av. Presidente Getúlio Vargas, 864<br>Cabo de Santo Agostinho - PE</span></p>
+                  <p class="location__line"><span class="icon icon--phone" aria-hidden="true"></span>
+                    <span><a href="tel:+558135124150">(81) 3512-4150</a></span></p>
+                  <p class="location__line location__line--how"><span class="icon icon--phone" aria-hidden="true"></span>
+                    <span>Agenda somente por telefone</span></p>
+                </div>
+                <div class="location__plans">
+                  <p class="location__plans-title">Convênios</p>
+                  <ul class="chips" data-plans>
+                    <li class="chip" data-plan="allianz">Allianz Saúde</li>
+                    <li class="chip" data-plan="amil">Amil</li>
+                    <li class="chip" data-plan="bradesco">Bradesco Saúde</li>
+                    <li class="chip" data-plan="gama">Gama Saúde</li>
+                    <li class="chip" data-plan="geap">Geap</li>
+                    <li class="chip" data-plan="golden">Golden Cross</li>
+                    <li class="chip" data-plan="mediservice">Mediservice</li>
+                    <li class="chip" data-plan="petrobras">Saúde Petrobras</li>
+                    <li class="chip" data-plan="unimed">Unimed</li>
+                  </ul>
+                </div>
+                <div class="location__actions">
+                  <a class="btn btn--primary btn--block" data-select-location href="tel:+558135124150">
+                    <span class="icon icon--phone" aria-hidden="true"></span>Ligar para agendar</a>
+                  <a class="btn btn--quiet btn--block" href="https://www.google.com/maps/search/?api=1&amp;query=Hospital%20S%C3%A3o%20Sebasti%C3%A3o%2C%20Av.%20Presidente%20Get%C3%BAlio%20Vargas%2C%20864%2C%20Cabo%20de%20Santo%20Agostinho" target="_blank" rel="noopener noreferrer">
+                    <span class="icon icon--map" aria-hidden="true"></span>Como chegar<span class="visually-hidden"> (abre em nova aba)</span></a>
+                </div>
+              </article>
+            </div>
+            <p class="booking__note"><span class="icon icon--info" aria-hidden="true"></span>A cobertura pode mudar conforme o plano e a unidade. Confirme a sua ao agendar.</p>
+          </div>
+
+          <!-- PASSO 2: ATENDIMENTO (exibido pelo JavaScript) -->
+          <div class="booking__step" data-step="2" hidden>
+            <button class="booking__back" type="button" data-back="1"><span class="icon icon--back" aria-hidden="true"></span>Trocar local</button>
+            <h3 class="booking__step-title" tabindex="-1"><span class="booking__step-num">2</span>Como será o atendimento?</h3>
+            <p class="booking__chosen">Local escolhido: <strong data-chosen-name></strong></p>
+
+            <fieldset class="choice">
+              <legend class="visually-hidden">Tipo de atendimento</legend>
+              <label class="choice__option">
+                <input type="radio" name="tipo" value="particular" data-type>
+                <span class="choice__box"><strong>Particular</strong><span>Consulta paga diretamente</span></span>
+              </label>
+              <label class="choice__option">
+                <input type="radio" name="tipo" value="convenio" data-type>
+                <span class="choice__box"><strong>Convênio</strong><span>Pelo seu plano de saúde</span></span>
+              </label>
+            </fieldset>
+
+            <div class="field" data-plan-field hidden>
+              <label class="field__label" for="plano">Qual é o seu plano?</label>
+              <select class="field__select" id="plano" data-plan-select>
+                <option value="">Selecione o plano</option>
+                <option value="allianz">Allianz Saúde</option>
+                <option value="amil">Amil</option>
+                <option value="assefaz">Assefaz</option>
+                <option value="bradesco">Bradesco Saúde</option>
+                <option value="camed">Camed</option>
+                <option value="capesesp">CapeSesp</option>
+                <option value="cassi">Cassi</option>
+                <option value="compesa">Compesa Saúde</option>
+                <option value="fachesf">Fachesf</option>
+                <option value="fisco">Fisco Saúde</option>
+                <option value="gama">Gama Saúde</option>
+                <option value="geap">Geap</option>
+                <option value="golden">Golden Cross</option>
+                <option value="hapvida">Hapvida</option>
+                <option value="mediservice">Mediservice</option>
+                <option value="porto">Porto Saúde</option>
+                <option value="correios">Postal Saúde</option>
+                <option value="caixa">Saúde Caixa</option>
+                <option value="petrobras">Saúde Petrobras</option>
+                <option value="sulamerica">SulAmérica</option>
+                <option value="unimed">Unimed</option>
+                <option value="outro">Outro plano</option>
+              </select>
+            </div>
+
+            <div class="field" data-other-field hidden>
+              <label class="field__label" for="outro-plano">Nome do plano</label>
+              <input class="field__input" id="outro-plano" type="text" maxlength="40" autocomplete="off" data-other-input>
+            </div>
+
+            <p class="plan-status" data-plan-status role="status" aria-live="polite"></p>
+
+            <p class="booking__hint" id="hint-continuar" data-next-hint>Escolha particular ou convênio (e o seu plano) para continuar.</p>
+            <button class="btn btn--primary btn--lg btn--block" type="button" data-next="3" aria-describedby="hint-continuar" disabled>
+              Continuar<span class="icon icon--forward" aria-hidden="true"></span></button>
+          </div>
+
+          <!-- PASSO 3: ENVIAR -->
+          <div class="booking__step" data-step="3" hidden>
+            <button class="booking__back" type="button" data-back="2"><span class="icon icon--back" aria-hidden="true"></span>Voltar</button>
+            <h3 class="booking__step-title" tabindex="-1"><span class="booking__step-num">3</span>Confira e envie</h3>
+
+            <dl class="summary">
+              <div><dt>Local</dt><dd data-summary-location></dd></div>
+              <div><dt>Atendimento</dt><dd data-summary-type></dd></div>
+            </dl>
+
+            <div class="summary__message">
+              <p class="summary__message-label">Mensagem que será enviada</p>
+              <p class="summary__message-text" data-summary-message></p>
+            </div>
+
+            <a class="btn btn--whatsapp btn--lg btn--block" data-send href="#" target="_blank" rel="noopener noreferrer">
+              <span class="icon icon--whatsapp" aria-hidden="true"></span><span data-send-label>Enviar pelo WhatsApp</span><span class="visually-hidden" data-send-sr> (abre o WhatsApp em nova aba)</span></a>
+            <div class="summary__alt" data-alt></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img class="footer__logo" src="assets/images/logo-lockup-white.webp" alt="Dr. Márcio Crisanto, Ortopedia de Coluna" width="284" height="238" loading="lazy">
+      </div>
+
+      <div class="footer__col footer__col--doctor">
+        <h2 class="footer__title">Responsável técnico</h2>
+        <p class="footer__doctor"><strong>Dr. Márcio Crisanto</strong><br>Médico · Ortopedia e Traumatologia<br>CRM-PE 12253 · RQE 9294</p>
+        <a class="footer__social" href="https://www.instagram.com/drmarciocrisanto/" target="_blank" rel="noopener noreferrer">
+          <span class="icon icon--instagram" aria-hidden="true"></span>@drmarciocrisanto<span class="visually-hidden"> (abre em nova aba)</span></a>
+      </div>
+
+      <div class="footer__col footer__col--places">
+        <h2 class="footer__title">Locais de atendimento</h2>
+        <dl class="footer__places">
+          <div>
+            <dt>Recife</dt>
+            <dd><span>Ortoclínica Boa Viagem</span>&nbsp;· <span>Clínica de Ortopedia de Boa Viagem</span>&nbsp;· <span>Maxiclínicas São Marcos (Paissandu)</span></dd>
+          </div>
+          <div>
+            <dt>Olinda</dt>
+            <dd>Clifor</dd>
+          </div>
+          <div>
+            <dt>Cabo de Santo Agostinho</dt>
+            <dd><span>Clínica de Saúde do Cabo</span>&nbsp;· <span>Hospital São Sebastião</span></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>As informações deste site têm caráter educativo e não substituem a consulta médica.</p>
+      <p>
+        © <span data-year>2026</span> Dr. Márcio Crisanto ·
+        Site desenvolvido por <a href="https://devluizcrisanto.com.br" target="_blank" rel="noopener noreferrer">Luiz Crisanto<span class="visually-hidden"> (abre em nova aba)</span></a> ·
+        Ícones por <a href="https://icons8.com.br" target="_blank" rel="noopener noreferrer">Icons8<span class="visually-hidden"> (abre em nova aba)</span></a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Barra de agendamento fixa no mobile -->
+  <div class="mobile-cta" data-mobile-cta>
+    <a class="btn btn--primary btn--block" href="#agendar">
+      <span class="icon icon--calendar" aria-hidden="true"></span>Agendar consulta</a>
+  </div>
+
+  <a class="to-top" href="#topo" data-to-top aria-label="Voltar ao topo">
+    <span class="icon icon--up" aria-hidden="true"></span>
+  </a>
+</body>
+</html>
