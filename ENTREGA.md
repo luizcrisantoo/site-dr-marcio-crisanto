@@ -72,7 +72,7 @@ Sem JavaScript, cada card abre o WhatsApp direto com a mensagem base + unidade.
 - Informacional: hérnia de disco precisa de cirurgia · dor ciática qual médico procurar · quando procurar ortopedista de coluna
 
 **Domínio:** o site oficial é https://www.drmarciocrisanto.com.br (com www). Canonical, og, schema, sitemap, robots e llms.txt já apontam pra ele, e o _redirects manda a versão sem www e a http pra essa. Vale registrar drmarciocrisanto.med.br (extensão exclusiva de médicos) como alias com 301.
-**Atenção no site publicado hoje:** ao tentar ler o robots.txt de www.drmarciocrisanto.com.br, a leitura falhou por excesso de redirecionamentos (loop). Se isso acontecer também com o Googlebot, a indexação fica prejudicada. Conferir no Search Console (Configurações > robots.txt) e no painel da hospedagem se não há redirect www <> sem www nos dois sentidos.
+**Site publicado hoje:** o Search Console mostra "Nenhum arquivo robots.txt" (o Google trata como "pode rastrear tudo", então não bloqueia a indexação). Ao publicar esta versão, o robots.txt passa a existir com a linha do sitemap; depois, enviar https://www.drmarciocrisanto.com.br/sitemap.xml em Sitemaps e usar "Solicitar nova verificação" no relatório de robots.txt.
 
 **Analytics:** tags do GA4 e do Search Console comentadas no `<head>`; evento `clique_agendamento` já disparado em todo clique de WhatsApp/telefone (js/modules/api.js). Ao ativar o GA4, liberar googletagmanager.com na CSP do `_headers`.
 
@@ -86,5 +86,17 @@ Avaliação heurística completa em `IHC.md`.
 
 ## Próxima fase de SEO (para ser referência em Recife)
 
-Páginas próprias por condição e por cidade, com 900 a 1.500 palavras, revisadas pelo Dr. Márcio (caixa de autoria com CRM/RQE e data de revisão), fontes citadas e schema MedicalWebPage. Fase 1: /sobre/, /hernia-de-disco/, /dor-lombar/, /dor-ciatica/, /cirurgia-de-coluna/, /ortopedista-coluna-olinda/, /ortopedista-coluna-cabo-de-santo-agostinho/. Quando houver mais de uma página, trocar os caminhos para absolutos (/css, /assets, /js e /#secao no menu).
-Off-page: pedir link para o site no perfil dele no site da Clifor, no Instagram da Ortoclínica, no Doctoralia e na bio do Instagram; manter nome, endereço e telefone iguais em todos os diretórios.
+Páginas próprias por condição e por cidade, revisadas pelo Dr. Márcio (caixa de autoria com CRM/RQE e data de revisão), fontes citadas e schema MedicalWebPage.
+
+**Criadas em 11/09/2026 (já no sitemap.xml e no llms.txt):**
+- https://www.drmarciocrisanto.com.br/hernia-de-disco/ (MedicalWebPage + BreadcrumbList + FAQPage, 5 fontes)
+- https://www.drmarciocrisanto.com.br/dor-ciatica/ (MedicalWebPage + BreadcrumbList + FAQPage, 5 fontes)
+- https://www.drmarciocrisanto.com.br/ortopedista-coluna-olinda/ (WebPage sobre o médico e a Clifor + BreadcrumbList + FAQPage)
+
+Junto com elas: todos os caminhos do site passaram a ser absolutos (/css, /assets, /js, e /#secao no menu das páginas internas), versão dos arquivos ?v=10, link "Saiba mais" nos cards de hérnia e ciática da home, "Clifor" no rodapé virou link para a página de Olinda. As páginas internas usam o mesmo header, rodapé, barra de agendamento do celular e tokens da home; o CSS novo está no bloco "Páginas de conteúdo" do styles.css.
+
+**Revisar com o Dr. Márcio antes de divulgar:** o texto médico das duas páginas de condição (a data de revisão exibida é 11/09/2026; se ele pedir mudança, atualizar a data na caixa de autoria e o lastReviewed/dateModified do JSON-LD).
+
+**Falta criar (fase 1):** /sobre/, /dor-lombar/, /cirurgia-de-coluna/, /ortopedista-coluna-cabo-de-santo-agostinho/. Depois: páginas de Boa Viagem e Paissandu, dor cervical, estenose do canal vertebral, escoliose e artrose da coluna. Cada nova página entra no sitemap.xml, no llms.txt e ganha link a partir da home e das páginas relacionadas.
+
+Off-page: pedir link para o site no perfil dele no site da Clifor (de preferência apontando para /ortopedista-coluna-olinda/), no Instagram da Ortoclínica, no Doctoralia e na bio do Instagram; manter nome, endereço e telefone iguais em todos os diretórios.

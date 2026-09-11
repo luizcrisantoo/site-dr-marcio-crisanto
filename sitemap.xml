@@ -13,4 +13,22 @@
       <image:loc>https://www.drmarciocrisanto.com.br/assets/images/dr-marcio-crisanto-cirurgia.jpg</image:loc>
     </image:image>
   </url>
+  <url>
+    <loc>https://www.drmarciocrisanto.com.br/hernia-de-disco/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.drmarciocrisanto.com.br/dor-ciatica/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.drmarciocrisanto.com.br/ortopedista-coluna-olinda/</loc>
+    <lastmod>2026-09-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

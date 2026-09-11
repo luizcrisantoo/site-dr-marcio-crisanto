@@ -23,11 +23,12 @@ function observeReveal() {
   });
 }
 
+/* A barra some quando o agendamento (home), um bloco de agendar (páginas internas) ou o rodapé está visível */
 function observeBookingSection() {
-  const booking = document.getElementById('agendar');
-  const footer = document.querySelector('.footer');
   const bar = document.querySelector('[data-mobile-cta]');
-  if (!booking || !bar || !('IntersectionObserver' in window)) return;
+  if (!bar || !('IntersectionObserver' in window)) return;
+  const targets = Array.from(document.querySelectorAll('#agendar, [data-hides-mobile-cta], .footer'));
+  if (!targets.length) return;
 
   const visible = new Set();
   const observer = new IntersectionObserver((entries) => {
@@ -38,8 +39,7 @@ function observeBookingSection() {
     bar.classList.toggle('is-hidden', visible.size > 0);
   }, { threshold: 0.05 });
 
-  observer.observe(booking);
-  if (footer) observer.observe(footer);
+  targets.forEach((target) => observer.observe(target));
 }
 
 function handleScrollState(header, toTop) {

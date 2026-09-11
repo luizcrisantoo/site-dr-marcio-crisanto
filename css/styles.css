@@ -806,3 +806,191 @@ button, input, select { font: inherit; color: inherit; }
   font-family: var(--font-primary); font-size: 1rem; font-weight: 500; line-height: 1.4; letter-spacing: 0.01em;
   color: var(--sec-muted);
 }
+
+/* ==========================================================
+   Páginas de conteúdo (condições e cidades)
+   /hernia-de-disco/, /dor-ciatica/, /ortopedista-coluna-olinda/
+   ========================================================== */
+
+/* Link "Saiba mais" nos cards de condição, alinhado na base do card */
+.condition__link {
+  grid-column: 2;
+  justify-self: start; align-self: end;
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  min-height: 44px; margin-top: 0.25rem;
+  font-size: 0.92rem; font-weight: 600; color: var(--teal-800);
+  text-decoration: underline; text-decoration-color: rgba(31, 82, 82, 0.35); text-underline-offset: 4px;
+}
+.condition__link:hover { color: var(--teal-800); text-decoration-color: currentColor; }
+.condition__link .icon { font-size: 0.85em; vertical-align: 0; }
+.condition:has(.condition__link) { grid-template-rows: auto 1fr auto; }
+@media (min-width: 1024px) {
+  .condition__link { grid-column: 1; }
+  .condition:has(.condition__link) { grid-template-rows: auto auto 1fr auto; }
+  .conditions--3 { grid-template-columns: repeat(3, 1fr); }
+  .steps--3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Rodapé: local com página própria */
+.footer__place-link {
+  color: inherit;
+  text-decoration: underline; text-decoration-color: rgba(255, 255, 255, 0.45); text-underline-offset: 3px;
+}
+.footer__place-link:hover { color: var(--beige); text-decoration-color: currentColor; }
+
+/* Topo das páginas internas */
+.page-hero { padding-top: clamp(1.25rem, 1rem + 1.25vw, 2.25rem); }
+.breadcrumb { margin-bottom: 1.25rem; font-size: 0.875rem; }
+.breadcrumb ol { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.6rem; }
+.breadcrumb li { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--ink-muted); }
+.breadcrumb li + li::before {
+  content: ''; width: 0.4rem; height: 0.4rem;
+  border-top: 1.5px solid currentColor; border-right: 1.5px solid currentColor;
+  transform: rotate(45deg); opacity: 0.7;
+}
+.breadcrumb a { display: inline-block; padding-block: 0.6rem; color: var(--teal-800); font-weight: 500; }
+.page-title {
+  max-width: 22ch;
+  font-family: var(--font-heading); font-weight: 600;
+  font-size: var(--fs-hero); line-height: 1.04; letter-spacing: -0.015em;
+  color: var(--graphite-900);
+}
+.page-hero__lead { margin-top: 1.1rem; max-width: 42rem; font-size: var(--fs-md); color: var(--ink-muted); }
+.page-hero .hero__actions { margin-top: 1.75rem; }
+
+/* Caixa de autoria (revisão médica) */
+.author-box {
+  display: flex; align-items: center; gap: 0.9rem;
+  max-width: 42rem; margin-top: 1.75rem; padding: 0.9rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--line); border-left: 4px solid var(--teal-700);
+  border-radius: var(--border-radius);
+}
+.author-box__photo {
+  flex: none; width: 56px; height: 56px; border-radius: 50%;
+  object-fit: cover; object-position: 50% 15%;
+  background: var(--teal);
+}
+.author-box__text { display: flex; flex-direction: column; font-size: 0.85rem; line-height: 1.45; color: var(--ink-muted); }
+.author-box__text strong { font-size: 0.95rem; font-weight: 600; color: var(--graphite-900); }
+
+/* Texto de leitura */
+.article { max-width: 70ch; }
+.article > * + * { margin-top: 1rem; }
+.article p, .article li { line-height: 1.75; }
+.article .section__title { margin-bottom: 0.25rem; }
+.article > .article__h2 { margin-top: clamp(2.25rem, 1.75rem + 1.5vw, 3rem); }
+.article h3 { margin-top: 1.75rem; font-size: 1.2rem; font-weight: 600; line-height: 1.3; color: var(--graphite-900); }
+.article h3 + p, .article h3 + ul { margin-top: 0.5rem; }
+.article a:not(.btn) { font-weight: 600; color: var(--sec-accent); }
+.article strong { color: var(--graphite-900); font-weight: 600; }
+.article__list { display: grid; gap: 0.5rem; }
+.article__list li { position: relative; padding-left: 1.35rem; }
+.article__list li::before {
+  content: ''; position: absolute; left: 0.1rem; top: 0.72em;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--sec-accent);
+}
+.article--after { margin-top: clamp(2.25rem, 1.75rem + 1.5vw, 3rem); }
+.article__alert { max-width: 70ch; }
+.alert-box__note { margin-top: 0.75rem; font-size: 0.95rem; line-height: 1.6; color: #4A330A; }
+.alert-box__note strong { color: #5C3C0B; }
+
+/* Comparação lado a lado (dor lombar x ciática) */
+.compare { display: grid; gap: 0.75rem; margin-top: 1rem; }
+.compare__item {
+  padding: 1.1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--line); border-radius: var(--border-radius);
+}
+.compare__item h3 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+.compare__item p { font-size: 0.97rem; line-height: 1.6; color: var(--ink); }
+@media (min-width: 640px) { .compare { grid-template-columns: 1fr 1fr; } }
+
+/* Resumo do médico (página de cidade) */
+.doctor-summary { display: grid; gap: 2rem; align-items: center; }
+.doctor-summary .about__creds { margin-top: 0.5rem; }
+.doctor-summary__media { max-width: 320px; width: 100%; margin-inline: auto; }
+.doctor-summary__media img {
+  width: 100%; aspect-ratio: 1 / 1; object-fit: cover;
+  border-radius: var(--radius-lg); background: var(--teal); box-shadow: var(--shadow-lg);
+}
+@media (min-width: 900px) {
+  .doctor-summary { grid-template-columns: minmax(0, 1fr) 320px; gap: 4rem; }
+  .doctor-summary__media { margin-inline: 0; justify-self: end; }
+}
+
+/* Card do local (página de cidade) */
+.place-card {
+  display: grid; gap: 1.25rem;
+  padding: 1.5rem 1.25rem;
+  background: var(--surface);
+  border: 2px solid var(--line); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.place-card__info { display: flex; flex-direction: column; gap: 0.7rem; }
+.place-card .location__region,
+.place-card .location__name { margin: 0; }
+.place-card .location__sub { margin: -0.45rem 0 0; }
+.place-card__plans { padding-top: 1.1rem; border-top: 1px dashed var(--line); text-align: center; }
+.place-card__plans .chips { justify-content: center; }
+.place-card__plans .chip { font-size: 0.85rem; }
+.place-card__note { margin-top: 0.75rem; font-size: 0.85rem; color: var(--ink-muted); }
+.place-card__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.place-card__actions .btn { flex: 1 1 220px; white-space: nowrap; }
+@media (min-width: 900px) {
+  .place-card { grid-template-columns: 1fr 1fr; column-gap: 2.5rem; padding: 2rem 2.25rem; }
+  .place-card__plans { align-self: center; padding: 0 0 0 2.5rem; border-top: 0; border-left: 1px dashed var(--line); }
+  .place-card__actions { grid-column: 1 / -1; padding-top: 1.25rem; border-top: 1px dashed var(--line); }
+  .place-card__actions .btn { flex: 0 1 280px; }
+}
+
+.page-actions { margin-top: 1.75rem; }
+
+/* Fim da página: agendar, leia também e fontes (sobre o teal da logo) */
+.cta-box {
+  display: grid; gap: 1.5rem;
+  padding: 1.75rem 1.25rem;
+  background: var(--s1);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 60px -30px rgba(31, 36, 36, 0.55);
+}
+.cta-box__text p { margin-top: 0.75rem; max-width: 60ch; color: var(--ink-muted); }
+.cta-box__actions { display: flex; flex-direction: column; gap: 0.75rem; }
+.cta-box__note { display: flex; gap: 0.5rem; align-items: flex-start; font-size: 0.95rem; }
+.cta-box__note .icon { margin-top: 0.2em; color: var(--teal-700); }
+.cta-box__note a { font-weight: 600; color: var(--teal-800); }
+@media (min-width: 560px) { .cta-box__actions { flex-direction: row; flex-wrap: wrap; } }
+@media (min-width: 900px) {
+  .cta-box { grid-template-columns: minmax(0, 1fr) auto; align-items: center; column-gap: 3rem; padding: 2.5rem 2.75rem; }
+  .cta-box__actions { flex-direction: column; }
+}
+
+.page-end__grid { display: grid; gap: 2rem; margin-top: clamp(2rem, 1.5rem + 1.5vw, 2.75rem); }
+@media (min-width: 900px) {
+  .page-end__grid { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 3rem; align-items: start; }
+  .page-end__grid--single { grid-template-columns: minmax(0, 1fr); max-width: 560px; }
+}
+.related__title, .sources__title {
+  margin-bottom: 0.85rem;
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--graphite-900);
+}
+.related-links { display: grid; gap: 0.5rem; }
+.related-links__item {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  min-height: 56px; padding: 0.85rem 1.1rem;
+  background: var(--s1); border-radius: var(--border-radius);
+  font-weight: 600; line-height: 1.35; color: var(--teal-800); text-decoration: none;
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+}
+.related-links__item:hover { color: var(--teal-800); transform: translateY(-1px); box-shadow: var(--shadow-lg); }
+.related-links__item .icon { flex: none; }
+.sources__list { display: grid; gap: 0.6rem; padding-left: 1.4rem; list-style: decimal; font-size: 0.9rem; line-height: 1.5; color: var(--ink); }
+.sources__list li::marker { font-weight: 600; color: var(--graphite-900); }
+.sources__list a { font-weight: 600; color: var(--graphite-900); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.sources__list a:hover { color: var(--ink); text-decoration-thickness: 2px; }
+
+/* Coluna de leitura centralizada nas páginas de condição (~70 caracteres por linha) */
+.container--read { max-width: calc(70ch + 2.5rem); }
+@media (min-width: 768px) { .container--read { max-width: calc(70ch + 4rem); } }
