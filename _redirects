@@ -1,5 +1,6 @@
-# Domínio único (evita conteúdo duplicado). Ao criar o site no Netlify, acrescente também:
-# https://NOME-DO-SITE.netlify.app/*  https://drmarciocrisanto.com.br/:splat  301!
-https://www.drmarciocrisanto.com.br/*  https://drmarciocrisanto.com.br/:splat  301!
-http://www.drmarciocrisanto.com.br/*   https://drmarciocrisanto.com.br/:splat  301!
-http://drmarciocrisanto.com.br/*       https://drmarciocrisanto.com.br/:splat  301!
+# Domínio único: https://www.drmarciocrisanto.com.br (evita conteúdo duplicado entre com e sem www / http e https).
+# Ao criar/ligar o site no Netlify, acrescente também a linha do subdomínio dele:
+# https://NOME-DO-SITE.netlify.app/*  https://www.drmarciocrisanto.com.br/:splat  301!
+https://drmarciocrisanto.com.br/*      https://www.drmarciocrisanto.com.br/:splat  301!
+http://drmarciocrisanto.com.br/*       https://www.drmarciocrisanto.com.br/:splat  301!
+http://www.drmarciocrisanto.com.br/*   https://www.drmarciocrisanto.com.br/:splat  301!

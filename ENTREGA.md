@@ -71,10 +71,8 @@ Sem JavaScript, cada card abre o WhatsApp direto com a mensagem base + unidade.
 - Navegacional local: ortopedista de coluna perto de mim · ortopedista coluna Paissandu · médico de coluna Boa Viagem
 - Informacional: hérnia de disco precisa de cirurgia · dor ciática qual médico procurar · quando procurar ortopedista de coluna
 
-**Domínio** (livres no registro.br em 10/09/2026):
-1. drmarciocrisanto.com.br (usado no canonical, sitemap e schema)
-2. drmarciocrisanto.med.br (extensão exclusiva de médicos, exige CRM)
-3. marciocrisanto.com.br
+**Domínio:** o site oficial é https://www.drmarciocrisanto.com.br (com www). Canonical, og, schema, sitemap, robots e llms.txt já apontam pra ele, e o _redirects manda a versão sem www e a http pra essa. Vale registrar drmarciocrisanto.med.br (extensão exclusiva de médicos) como alias com 301.
+**Atenção no site publicado hoje:** ao tentar ler o robots.txt de www.drmarciocrisanto.com.br, a leitura falhou por excesso de redirecionamentos (loop). Se isso acontecer também com o Googlebot, a indexação fica prejudicada. Conferir no Search Console (Configurações > robots.txt) e no painel da hospedagem se não há redirect www <> sem www nos dois sentidos.
 
 **Analytics:** tags do GA4 e do Search Console comentadas no `<head>`; evento `clique_agendamento` já disparado em todo clique de WhatsApp/telefone (js/modules/api.js). Ao ativar o GA4, liberar googletagmanager.com na CSP do `_headers`.
 
