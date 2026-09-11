@@ -1028,3 +1028,30 @@ button, input, select { font: inherit; color: inherit; }
 }
 .article > ul:not([class]) { padding-left: 1.2rem; list-style: disc; }
 .article > ul:not([class]) li + li { margin-top: 0.4rem; }
+
+/* ==========================================================
+   Página Sobre (/sobre/), página do Cabo e link da home para /sobre/
+   ========================================================== */
+
+/* Home, seção Sobre: botão do Instagram e link "Conheça a trajetória completa" na mesma linha quando cabem */
+.about__social { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.5rem; }
+.about__social .condition__link { margin-top: 0; }
+
+/* Subtítulo visível logo abaixo do H1 */
+.page-title .section__title-sub { margin-top: 0.75rem; font-size: var(--fs-md); }
+
+/* Topo da página Sobre: texto à esquerda, retrato à direita (no celular, retrato menor abaixo do texto) */
+.profile-hero .doctor-summary { align-items: center; }
+.profile-hero .doctor-summary__media { max-width: 260px; }
+.profile-hero .page-hero__lead { margin-top: 1rem; }
+.profile-hero__verify { margin-top: 1rem; max-width: 42rem; color: var(--ink-muted); }
+.profile-hero__verify a { color: var(--teal-800); font-weight: 600; }
+@media (min-width: 900px) {
+  .profile-hero .doctor-summary { grid-template-columns: minmax(0, 1fr) 360px; }
+  .profile-hero .doctor-summary__media { max-width: 360px; }
+}
+
+/* Citação da bio com a fonte logo abaixo */
+.profile-quote { margin-top: 2rem; }
+.profile-quote .about__quote { margin-top: 0; }
+.profile-quote__source { margin-top: 0.5rem; font-size: 0.85rem; color: var(--sec-muted); }

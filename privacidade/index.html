@@ -16,13 +16,16 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/variables.css?v=11">
-  <link rel="stylesheet" href="/css/styles.css?v=12">
+  <link rel="stylesheet" href="/css/variables.css?v=13">
+  <link rel="stylesheet" href="/css/styles.css?v=13">
 
   <!-- Google Analytics 4 (G-GRQ0C4XLX9) com Modo de Consentimento: ver js/gtag-init.js e js/modules/consent.js -->
-  <script src="/js/gtag-init.js?v=11"></script>
+  <script src="/js/gtag-init.js?v=13"></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRQ0C4XLX9"></script>
-
+  <script type="module" src="/js/script.js?v=13"></script>
+  <link rel="modulepreload" href="/js/modules/api.js">
+  <link rel="modulepreload" href="/js/modules/menu.js">
+  <link rel="modulepreload" href="/js/modules/scroll.js">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -110,6 +113,7 @@
     </section>
   </main>
 
+  <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer__grid">
       <div class="footer__brand">
@@ -118,7 +122,7 @@
 
       <div class="footer__col footer__col--doctor">
         <h2 class="footer__title">Responsável técnico</h2>
-        <p class="footer__doctor"><strong>Dr. Márcio Crisanto</strong><br>Médico · Ortopedia e Traumatologia<br>CRM-PE 12253 · RQE 9294</p>
+        <p class="footer__doctor"><strong><a class="footer__place-link" href="/sobre/">Dr. Márcio Crisanto</a></strong><br>Médico · Ortopedia e Traumatologia<br>CRM-PE 12253 · RQE 9294</p>
         <a class="footer__social" href="https://www.instagram.com/drmarciocrisanto/" target="_blank" rel="noopener noreferrer">
           <span class="icon icon--instagram" aria-hidden="true"></span>@drmarciocrisanto<span class="visually-hidden"> (abre em nova aba)</span></a>
       </div>
@@ -136,7 +140,7 @@
           </div>
           <div>
             <dt>Cabo de Santo Agostinho</dt>
-            <dd><span>Clínica de Saúde do Cabo</span>&nbsp;· <span>Hospital São Sebastião</span></dd>
+            <dd><a class="footer__place-link" href="/ortopedista-coluna-cabo-de-santo-agostinho/"><span>Clínica de Saúde do Cabo</span></a>&nbsp;· <a class="footer__place-link" href="/ortopedista-coluna-cabo-de-santo-agostinho/"><span>Hospital São Sebastião</span></a></dd>
           </div>
         </dl>
       </div>
