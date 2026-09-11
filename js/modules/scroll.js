@@ -60,7 +60,7 @@ function handleScrollState(header, toTop) {
   }
 
   window.addEventListener('scroll', onScroll, { passive: true });
-  update();
+  window.requestAnimationFrame(update);
 }
 
 /* Mostra no menu em qual seção o visitante está (heurística: visibilidade do status do sistema) */

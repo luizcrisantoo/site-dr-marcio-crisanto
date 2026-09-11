@@ -6,12 +6,12 @@ Para testar localmente: `python3 -m http.server` na pasta e abrir http://localho
 ## Estrutura
 
 ```
-index.html · favicon.ico · sitemap.xml · robots.txt · llms.txt · _headers (Netlify)
+index.html · 404.html · favicon.ico · site.webmanifest · sitemap.xml · robots.txt · llms.txt · _headers e _redirects (Netlify)
 assets/images  logo, foto, og-image 1200x630, pasta congressos/ (vazia, para as fotos)
 assets/icons   ícones Icons8 (PNG usados como máscara CSS, herdam a cor do texto)
 assets/fonts   Cormorant Garamond + Inter (woff2, subset latin)
 css/variables.css · css/styles.css
-js/script.js · js/modules/{menu,scroll,booking,api}.js · js/gtag-init.js
+js/script.js · js/modules/{menu,scroll,booking,plans,api}.js · js/gtag-init.js
 ```
 
 ## Fluxo de agendamento
@@ -57,12 +57,14 @@ Sem JavaScript, cada card abre o WhatsApp direto com a mensagem base + unidade.
 ## Kit SEO
 
 **Title (53):** Ortopedista de Coluna em Recife | Dr. Márcio Crisanto
-**Meta description (148):** Ortopedista de coluna em Recife e Olinda: hérnia de disco, dor lombar, ciática e escoliose. Dr. Márcio Crisanto, CRM-PE 12253. Agende pelo WhatsApp.
-**H1:** "Ortopedista de coluna em Recife e Olinda" + "Cuidado com a sua coluna, do diagnóstico ao tratamento." (palavra-chave dentro do H1)
-**Schema:** `Physician` (com knowsAbout das 8 condições) + 4 `MedicalClinic` com geo + `FAQPage` (as 6 dúvidas, pode virar rich result) + `WebSite`. Validar no Rich Results Test depois de publicar
+**Meta description (156):** Ortopedista de coluna em Recife (Boa Viagem e Paissandu), Olinda e Cabo. Hérnia de disco, dor lombar e ciática. Dr. Márcio Crisanto, CRM-PE 12253, RQE 9294.
+**H1:** "Ortopedista de coluna em Recife, Olinda e Cabo" + "Cuidado com a sua coluna, do diagnóstico ao tratamento."
+**Schema:** WebSite, WebPage (revisada pelo médico), Person (formação, CRM e RQE como credenciais), IndividualPhysician (endereço, geo, serviços, áreas atendidas), 5 MedicalClinic, Hospital (como afiliação) e FAQPage. Validado contra os tipos do schema.org. Obs.: desde 2023 o Google só mostra o FAQ em destaque para sites de saúde muito grandes; o schema continua útil para Bing e buscadores com IA, mas não conte com a sanfona na busca
 **Social:** og:image 1200x630, og:site_name, og:image:alt, twitter:card
-**Favicon:** marca da logo em quadrado (favicon.ico 16/32/48, PNG 32 e 192, apple-touch 180)
-**Arquivos na raiz:** sitemap.xml, robots.txt, llms.txt, _headers
+**Favicon e manifest:** favicon.ico 16/32/48, PNG 32 e 192, apple-touch 180, site.webmanifest
+**Performance:** Lighthouse mobile local: Performance 91, Acessibilidade 100, Boas práticas 100, SEO 100. Depois: CSS sem @import em cascata, foto do hero não baixa no celular, avatar de 120px, modulepreload dos módulos JS
+**Netlify:** _redirects força https e domínio sem www (acrescentar a linha do *.netlify.app quando criar o site); _headers com HSTS, CSP e cache; 404.html próprio
+**Arquivos na raiz:** sitemap.xml, robots.txt, llms.txt, _headers, _redirects, 404.html, site.webmanifest
 
 **Palavras-chave de cauda longa**
 - Transacional: ortopedista de coluna em Boa Viagem · ortopedista de coluna Recife convênio Unimed · ortopedista de coluna Olinda · consulta ortopedista coluna Recife particular
@@ -83,3 +85,8 @@ Rodapé: "Site desenvolvido por Luiz Crisanto" (link para devluizcrisanto.com.br
 ## IHC
 
 Avaliação heurística completa em `IHC.md`.
+
+## Próxima fase de SEO (para ser referência em Recife)
+
+Páginas próprias por condição e por cidade, com 900 a 1.500 palavras, revisadas pelo Dr. Márcio (caixa de autoria com CRM/RQE e data de revisão), fontes citadas e schema MedicalWebPage. Fase 1: /sobre/, /hernia-de-disco/, /dor-lombar/, /dor-ciatica/, /cirurgia-de-coluna/, /ortopedista-coluna-olinda/, /ortopedista-coluna-cabo-de-santo-agostinho/. Quando houver mais de uma página, trocar os caminhos para absolutos (/css, /assets, /js e /#secao no menu).
+Off-page: pedir link para o site no perfil dele no site da Clifor, no Instagram da Ortoclínica, no Doctoralia e na bio do Instagram; manter nome, endereço e telefone iguais em todos os diretórios.

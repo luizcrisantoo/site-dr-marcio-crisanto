@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
 
-Disallow: /*?utm_
-
 Sitemap: https://drmarciocrisanto.com.br/sitemap.xml

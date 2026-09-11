@@ -3,18 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--
-    Headers de segurança (configurar no servidor / netlify.toml / _headers):
-    Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; frame-src https://www.google.com; base-uri 'self'; form-action 'self'
-    X-Frame-Options: DENY
-    X-Content-Type-Options: nosniff
-    Referrer-Policy: strict-origin-when-cross-origin
-    Permissions-Policy: camera=(), microphone=(), geolocation=()
-  -->
+  <!-- Headers de segurança: ver o arquivo _headers (Netlify) -->
   <title>Ortopedista de Coluna em Recife | Dr. Márcio Crisanto</title>
-  <meta name="description" content="Ortopedista de coluna em Recife, Olinda e Cabo de Santo Agostinho: hérnia de disco, dor lombar e ciática. Dr. Márcio Crisanto, CRM-PE 12253.">
+  <meta name="description" content="Ortopedista de coluna em Recife (Boa Viagem e Paissandu), Olinda e Cabo. Hérnia de disco, dor lombar e ciática. Dr. Márcio Crisanto, CRM-PE 12253, RQE 9294.">
   <link rel="canonical" href="https://drmarciocrisanto.com.br/">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#3B3F3F">
 
   <meta property="og:type" content="website">
@@ -38,9 +31,11 @@
   <link rel="icon" href="assets/images/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="assets/images/favicon-192.png" type="image/png" sizes="192x192">
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=7">
+  <link rel="stylesheet" href="css/variables.css?v=9">
+  <link rel="stylesheet" href="css/styles.css?v=9">
 
   <!-- Google Analytics 4: substituir G-XXXXXXXXXX pelo ID em analytics.google.com (e liberar googletagmanager.com na CSP) -->
   <!--
@@ -55,14 +50,122 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Physician",
-      "@id": "https://drmarciocrisanto.com.br/#medico",
-      "name": "Dr. Márcio Crisanto",
-      "alternateName": "Marcio Adriano Paiva Crisanto",
-      "description": "Médico ortopedista com atuação em coluna vertebral em Recife, Olinda e Cabo de Santo Agostinho.",
+      "@type": "WebSite",
+      "@id": "https://drmarciocrisanto.com.br/#site",
       "url": "https://drmarciocrisanto.com.br/",
-      "image": "https://drmarciocrisanto.com.br/assets/images/dr-marcio-crisanto.jpg",
-      "medicalSpecialty": "https://schema.org/Musculoskeletal",
+      "name": "Dr. Márcio Crisanto",
+      "alternateName": "Dr. Márcio Crisanto, Ortopedia de Coluna",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://drmarciocrisanto.com.br/#pessoa"
+      },
+      "about": {
+        "@id": "https://drmarciocrisanto.com.br/#medico"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://drmarciocrisanto.com.br/#pagina",
+      "url": "https://drmarciocrisanto.com.br/",
+      "name": "Ortopedista de Coluna em Recife | Dr. Márcio Crisanto",
+      "description": "Ortopedista de coluna em Recife (Boa Viagem e Paissandu), Olinda e Cabo. Hérnia de disco, dor lombar e ciática. Dr. Márcio Crisanto, CRM-PE 12253, RQE 9294.",
+      "inLanguage": "pt-BR",
+      "isPartOf": {
+        "@id": "https://drmarciocrisanto.com.br/#site"
+      },
+      "about": {
+        "@id": "https://drmarciocrisanto.com.br/#medico"
+      },
+      "mainEntity": {
+        "@id": "https://drmarciocrisanto.com.br/#medico"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://drmarciocrisanto.com.br/#foto"
+      },
+      "reviewedBy": {
+        "@id": "https://drmarciocrisanto.com.br/#pessoa"
+      },
+      "lastReviewed": "2026-09-11",
+      "dateModified": "2026-09-11"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://drmarciocrisanto.com.br/#foto",
+      "url": "https://drmarciocrisanto.com.br/assets/images/dr-marcio-crisanto.jpg",
+      "contentUrl": "https://drmarciocrisanto.com.br/assets/images/dr-marcio-crisanto.jpg",
+      "caption": "Dr. Márcio Crisanto, médico ortopedista com atuação em coluna"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://drmarciocrisanto.com.br/#pessoa",
+      "name": "Dr. Márcio Crisanto",
+      "honorificPrefix": "Dr.",
+      "givenName": "Marcio Adriano",
+      "familyName": "Paiva Crisanto",
+      "alternateName": [
+        "Marcio Adriano Paiva Crisanto",
+        "Márcio Crisanto"
+      ],
+      "jobTitle": "Médico ortopedista com atuação em coluna",
+      "description": "Médico, Ortopedia e Traumatologia (RQE 9294), CRM-PE 12253, com atuação em doenças da coluna vertebral em Recife, Olinda e Cabo de Santo Agostinho.",
+      "url": "https://drmarciocrisanto.com.br/",
+      "image": {
+        "@id": "https://drmarciocrisanto.com.br/#foto"
+      },
+      "nationality": {
+        "@type": "Country",
+        "name": "Brasil"
+      },
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Universidade de Pernambuco (UPE)"
+        },
+        {
+          "@type": "Hospital",
+          "name": "Hospital das Clínicas da Universidade Federal de Pernambuco (HC-UFPE)"
+        }
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registro no Conselho Regional de Medicina de Pernambuco",
+          "credentialCategory": "Registro profissional",
+          "identifier": "CRM-PE 12253",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Conselho Regional de Medicina do Estado de Pernambuco (Cremepe)"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Registro de Qualificação de Especialista em Ortopedia e Traumatologia",
+          "credentialCategory": "Especialidade médica",
+          "identifier": "RQE 9294",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "Conselho Federal de Medicina (CFM)"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Residência médica em Ortopedia e Traumatologia",
+          "credentialCategory": "Residência médica",
+          "recognizedBy": {
+            "@type": "Hospital",
+            "name": "Hospital das Clínicas da UFPE"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Especialização em cirurgia de coluna",
+          "credentialCategory": "Especialização",
+          "recognizedBy": {
+            "@type": "Hospital",
+            "name": "Hospital das Clínicas da UFPE"
+          }
+        }
+      ],
       "identifier": [
         {
           "@type": "PropertyValue",
@@ -75,16 +178,47 @@
           "value": "9294"
         }
       ],
-      "areaServed": [
-        "Recife",
-        "Olinda",
-        "Cabo de Santo Agostinho",
-        "Região Metropolitana do Recife"
+      "knowsAbout": [
+        {
+          "@type": "MedicalCondition",
+          "name": "Hérnia de disco"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Dor lombar",
+          "alternateName": "Lombalgia"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Dor cervical",
+          "alternateName": "Cervicalgia"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Dor ciática",
+          "alternateName": "Ciatalgia"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Estenose do canal vertebral"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Escoliose"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Artrose da coluna",
+          "alternateName": "Bico de papagaio"
+        },
+        {
+          "@type": "MedicalCondition",
+          "name": "Fratura vertebral"
+        },
+        "Cirurgia de coluna",
+        "Cirurgia endoscópica da coluna"
       ],
-      "sameAs": [
-        "https://www.instagram.com/drmarciocrisanto/"
-      ],
-      "location": [
+      "affiliation": [
         {
           "@id": "https://drmarciocrisanto.com.br/#ortoclinica-boa-viagem"
         },
@@ -92,10 +226,10 @@
           "@id": "https://drmarciocrisanto.com.br/#cobv"
         },
         {
-          "@id": "https://drmarciocrisanto.com.br/#clifor"
+          "@id": "https://drmarciocrisanto.com.br/#maxiclinicas"
         },
         {
-          "@id": "https://drmarciocrisanto.com.br/#maxiclinicas"
+          "@id": "https://drmarciocrisanto.com.br/#clifor"
         },
         {
           "@id": "https://drmarciocrisanto.com.br/#clinica-saude-cabo"
@@ -104,35 +238,108 @@
           "@id": "https://drmarciocrisanto.com.br/#hospital-sao-sebastiao"
         }
       ],
-      "jobTitle": "Médico ortopedista",
-      "knowsAbout": [
-        "Hérnia de disco",
-        "Dor lombar",
-        "Dor cervical",
-        "Dor ciática",
-        "Estenose do canal vertebral",
-        "Escoliose",
-        "Artrose da coluna",
-        "Fraturas vertebrais",
-        "Cirurgia de coluna"
+      "sameAs": [
+        "https://www.instagram.com/drmarciocrisanto/",
+        "https://www.rededorsaoluiz.com.br/encontre-um-medico/perfil/marcio-adriano-paiva-crisanto"
+      ]
+    },
+    {
+      "@type": "IndividualPhysician",
+      "@id": "https://drmarciocrisanto.com.br/#medico",
+      "name": "Dr. Márcio Crisanto",
+      "alternateName": "Marcio Adriano Paiva Crisanto",
+      "description": "Médico ortopedista (Ortopedia e Traumatologia, RQE 9294, CRM-PE 12253) com atuação em coluna vertebral. Atende em Boa Viagem e Paissandu (Recife), Olinda e Cabo de Santo Agostinho.",
+      "url": "https://drmarciocrisanto.com.br/",
+      "image": {
+        "@id": "https://drmarciocrisanto.com.br/#foto"
+      },
+      "logo": "https://drmarciocrisanto.com.br/assets/images/favicon-192.png",
+      "founder": {
+        "@id": "https://drmarciocrisanto.com.br/#pessoa"
+      },
+      "medicalSpecialty": [
+        "https://schema.org/Musculoskeletal",
+        "https://schema.org/Surgical"
       ],
       "telephone": "+558121291402",
-      "alumniOf": [
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Visconde de Jequitinhonha, 1144, 4º andar, salas 402 a 404",
+        "addressLocality": "Recife",
+        "addressRegion": "PE",
+        "postalCode": "51030-020",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -8.1314338,
+        "longitude": -34.9030214
+      },
+      "areaServed": [
         {
-          "@type": "CollegeOrUniversity",
-          "name": "Universidade de Pernambuco (UPE)"
+          "@type": "City",
+          "name": "Recife"
         },
         {
-          "@type": "CollegeOrUniversity",
-          "name": "Universidade Federal de Pernambuco (UFPE)"
+          "@type": "City",
+          "name": "Olinda"
+        },
+        {
+          "@type": "City",
+          "name": "Cabo de Santo Agostinho"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Região Metropolitana do Recife"
         }
+      ],
+      "isAcceptingNewPatients": true,
+      "availableService": [
+        {
+          "@type": "MedicalTherapy",
+          "name": "Tratamento conservador de doenças da coluna",
+          "description": "Medicação, fisioterapia, orientação postural e atividade física, conforme avaliação médica."
+        },
+        {
+          "@type": "SurgicalProcedure",
+          "name": "Cirurgia de coluna",
+          "description": "Considerada quando o tratamento conservador não é suficiente ou há sinais de alerta, após conversa sobre benefícios e riscos."
+        }
+      ],
+      "practicesAt": [
+        {
+          "@id": "https://drmarciocrisanto.com.br/#ortoclinica-boa-viagem"
+        },
+        {
+          "@id": "https://drmarciocrisanto.com.br/#cobv"
+        },
+        {
+          "@id": "https://drmarciocrisanto.com.br/#maxiclinicas"
+        },
+        {
+          "@id": "https://drmarciocrisanto.com.br/#clifor"
+        },
+        {
+          "@id": "https://drmarciocrisanto.com.br/#clinica-saude-cabo"
+        }
+      ],
+      "hospitalAffiliation": {
+        "@id": "https://drmarciocrisanto.com.br/#hospital-sao-sebastiao"
+      },
+      "sameAs": [
+        "https://www.instagram.com/drmarciocrisanto/",
+        "https://www.rededorsaoluiz.com.br/encontre-um-medico/perfil/marcio-adriano-paiva-crisanto"
       ]
     },
     {
       "@type": "MedicalClinic",
       "@id": "https://drmarciocrisanto.com.br/#ortoclinica-boa-viagem",
       "name": "Ortoclínica Boa Viagem",
-      "telephone": "+558121291402",
+      "description": "No Boa Viagem Medical Center (Hospital Alfa).",
+      "telephone": [
+        "+558121291402",
+        "+558130769245"
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Av. Visconde de Jequitinhonha, 1144, 4º andar, salas 402 a 404 (Boa Viagem Medical Center / Hospital Alfa)",
@@ -145,7 +352,8 @@
         "@type": "GeoCoordinates",
         "latitude": -8.1314338,
         "longitude": -34.9030214
-      }
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Ortocl%C3%ADnica%20Boa%20Viagem%2C%20Av.%20Visconde%20de%20Jequitinhonha%2C%201144%2C%20Recife"
     },
     {
       "@type": "MedicalClinic",
@@ -164,31 +372,17 @@
         "@type": "GeoCoordinates",
         "latitude": -8.10539,
         "longitude": -34.88856
-      }
-    },
-    {
-      "@type": "MedicalClinic",
-      "@id": "https://drmarciocrisanto.com.br/#clifor",
-      "name": "Clifor - Clínica de Fraturas, Ortopedia e Reabilitação de Pernambuco",
-      "telephone": "+558134296165",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Praça Doze de Março, 36, sala 01",
-        "addressLocality": "Olinda",
-        "addressRegion": "PE",
-        "postalCode": "53030-110",
-        "addressCountry": "BR"
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -8.00863,
-        "longitude": -34.84389
-      }
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Cl%C3%ADnica%20de%20Ortopedia%20de%20Boa%20Viagem%2C%20Av.%20Conselheiro%20Aguiar%2C%201733%2C%20Recife"
     },
     {
       "@type": "MedicalClinic",
       "@id": "https://drmarciocrisanto.com.br/#maxiclinicas",
-      "name": "Maxiclínicas São Marcos - Unidade Paissandu",
+      "name": "Maxiclínicas São Marcos, Unidade Paissandu",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Rede D'Or"
+      },
       "telephone": "+558130033230",
       "address": {
         "@type": "PostalAddress",
@@ -202,7 +396,35 @@
         "@type": "GeoCoordinates",
         "latitude": -8.06296,
         "longitude": -34.9
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Maxicl%C3%ADnicas%20S%C3%A3o%20Marcos%2C%20Rua%20Pac%C3%ADfico%20dos%20Santos%2C%20103%2C%20Recife",
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "name": "Agendar consulta online pela Rede D'Or",
+        "target": "https://www.rededorsaoluiz.com.br/paciente/marcar-consulta/?medicom=70820806&unidadem=2064"
       }
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://drmarciocrisanto.com.br/#clifor",
+      "name": "Clifor, Clínica de Fraturas, Ortopedia e Reabilitação de Pernambuco",
+      "alternateName": "Clifor Olinda",
+      "url": "https://cliforolinda.com.br/",
+      "telephone": "+558134296165",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Praça Doze de Março, 36, sala 01, Bairro Novo",
+        "addressLocality": "Olinda",
+        "addressRegion": "PE",
+        "postalCode": "53030-110",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -8.00863,
+        "longitude": -34.84389
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Clifor%2C%20Pra%C3%A7a%20Doze%20de%20Mar%C3%A7o%2C%2036%2C%20Olinda"
     },
     {
       "@type": "MedicalClinic",
@@ -211,17 +433,19 @@
       "telephone": "+558135181525",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Av. Presidente Getúlio Vargas, 974",
+        "streetAddress": "Av. Presidente Getúlio Vargas, 974, Centro",
         "addressLocality": "Cabo de Santo Agostinho",
         "addressRegion": "PE",
         "postalCode": "54505-560",
         "addressCountry": "BR"
-      }
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Cl%C3%ADnica%20de%20Sa%C3%BAde%20do%20Cabo%2C%20Av.%20Presidente%20Get%C3%BAlio%20Vargas%2C%20974%2C%20Cabo%20de%20Santo%20Agostinho"
     },
     {
       "@type": "Hospital",
       "@id": "https://drmarciocrisanto.com.br/#hospital-sao-sebastiao",
       "name": "Hospital São Sebastião",
+      "url": "https://hospitalsaosebastiaocabo.com.br/",
       "telephone": "+558135124150",
       "address": {
         "@type": "PostalAddress",
@@ -229,11 +453,16 @@
         "addressLocality": "Cabo de Santo Agostinho",
         "addressRegion": "PE",
         "addressCountry": "BR"
-      }
+      },
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=Hospital%20S%C3%A3o%20Sebasti%C3%A3o%2C%20Av.%20Presidente%20Get%C3%BAlio%20Vargas%2C%20864%2C%20Cabo%20de%20Santo%20Agostinho"
     },
     {
       "@type": "FAQPage",
-      "@id": "https://drmarciocrisanto.com.br/#duvidas",
+      "@id": "https://drmarciocrisanto.com.br/#faq",
+      "isPartOf": {
+        "@id": "https://drmarciocrisanto.com.br/#pagina"
+      },
+      "inLanguage": "pt-BR",
       "mainEntity": [
         {
           "@type": "Question",
@@ -284,21 +513,16 @@
           }
         }
       ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://drmarciocrisanto.com.br/#site",
-      "url": "https://drmarciocrisanto.com.br/",
-      "name": "Dr. Márcio Crisanto",
-      "inLanguage": "pt-BR",
-      "about": {
-        "@id": "https://drmarciocrisanto.com.br/#medico"
-      }
     }
   ]
 }
   </script>
-  <script type="module" src="js/script.js?v=7"></script>
+  <script type="module" src="js/script.js?v=9"></script>
+  <link rel="modulepreload" href="js/modules/api.js">
+  <link rel="modulepreload" href="js/modules/menu.js">
+  <link rel="modulepreload" href="js/modules/scroll.js">
+  <link rel="modulepreload" href="js/modules/plans.js">
+  <link rel="modulepreload" href="js/modules/booking.js">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -306,7 +530,7 @@
   <!-- ============ HEADER ============ -->
   <header class="header" id="topo">
     <div class="container header__inner">
-      <a class="brand" href="#topo" aria-label="Dr. Márcio Crisanto, página inicial">
+      <a class="brand" href="#topo" aria-label="Dr. Márcio Crisanto, Ortopedia de coluna, página inicial">
         <img class="brand__mark" src="assets/images/logo-mark.webp" alt="" width="29" height="41">
         <span class="brand__text">
           <span class="brand__name">Dr. Márcio Crisanto</span>
@@ -341,7 +565,7 @@
         <div class="hero__content">
           
           <div class="hero__id">
-            <img class="hero__avatar" src="assets/images/dr-marcio-crisanto-480.webp" alt="" width="60" height="60">
+            <img class="hero__avatar" src="assets/images/dr-marcio-crisanto-120.webp" alt="" width="60" height="60">
             <p><strong>Dr. Márcio Crisanto</strong><span>Médico · Ortopedia e Traumatologia</span><span>CRM-PE 12253 · RQE 9294</span></p>
           </div>
           <h1 class="hero__title" id="hero-titulo">
@@ -350,7 +574,7 @@
           </h1>
           <p class="hero__lead">
             Dor nas costas, no pescoço ou que desce para as pernas tem causa, e tem caminho.
-            O Dr. Márcio Crisanto atende há mais de 20 anos em Recife, Olinda e Cabo de Santo Agostinho, sempre explicando
+            O Dr. Márcio Crisanto atende há mais de 20 anos em Recife (Boa Viagem e Paissandu), Olinda e Cabo de Santo Agostinho, sempre explicando
             cada etapa com clareza.
           </p>
           <div class="hero__actions">
@@ -371,8 +595,9 @@
         <div class="hero__art">
           <div class="hero__frame">
             <picture>
+              <source media="(max-width: 1023.98px)" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
               <source srcset="assets/images/dr-marcio-crisanto-480.webp 480w, assets/images/dr-marcio-crisanto.webp 697w" sizes="(min-width: 1024px) 460px, 80vw" type="image/webp">
-              <img class="hero__photo" src="assets/images/dr-marcio-crisanto.jpg" alt="Dr. Márcio Crisanto, de jaleco branco, sorrindo" width="697" height="697" fetchpriority="high">
+              <img class="hero__photo" src="assets/images/dr-marcio-crisanto.jpg" alt="Dr. Márcio Crisanto, médico ortopedista com atuação em coluna, de jaleco branco" width="697" height="697" fetchpriority="high">
             </picture>
             <span class="hero__strip" aria-hidden="true"></span>
           </div>
@@ -389,8 +614,8 @@
       <div class="container">
         <header class="section__head">
           <p class="eyebrow">O que tratamos</p>
-          <h2 class="section__title" id="tratamentos-titulo">Problemas da coluna mais comuns no consultório</h2>
-          <p class="section__lead">Se você se reconhece em algum desses sintomas, uma avaliação ajuda a entender a causa e o que pode ser feito.</p>
+          <h2 class="section__title" id="tratamentos-titulo">Hérnia de disco, dor lombar, ciática e outros problemas da coluna</h2>
+          <p class="section__lead">Se você se reconhece em algum desses sintomas, uma avaliação com ortopedista de coluna ajuda a entender a causa e o que pode ser feito.</p>
         </header>
 
         <ul class="conditions">
@@ -401,22 +626,22 @@
           </li>
           <li class="condition">
             <span class="icon-badge"><span class="icon icon--back-pain" aria-hidden="true"></span></span>
-            <h3 class="condition__title">Dor lombar</h3>
+            <h3 class="condition__title">Dor lombar (lombalgia)</h3>
             <p>Dor na parte baixa das costas, que aparece de repente ou se arrasta há meses.</p>
           </li>
           <li class="condition">
             <span class="icon-badge"><span class="icon icon--neck" aria-hidden="true"></span></span>
-            <h3 class="condition__title">Dor cervical</h3>
+            <h3 class="condition__title">Dor cervical (dor no pescoço)</h3>
             <p>Dor e rigidez no pescoço, às vezes com dor de cabeça ou nos ombros.</p>
           </li>
           <li class="condition">
             <span class="icon-badge"><span class="icon icon--leg-trauma" aria-hidden="true"></span></span>
-            <h3 class="condition__title">Dor ciática</h3>
+            <h3 class="condition__title">Dor ciática (ciatalgia)</h3>
             <p>Dor em choque ou queimação que desce pela parte de trás da perna.</p>
           </li>
           <li class="condition">
             <span class="icon-badge"><span class="icon icon--elderly-cane" aria-hidden="true"></span></span>
-            <h3 class="condition__title">Estenose do canal</h3>
+            <h3 class="condition__title">Estenose do canal vertebral</h3>
             <p>Cansaço e dor nas pernas ao caminhar, que aliviam quando você senta.</p>
           </li>
           <li class="condition">
@@ -426,7 +651,7 @@
           </li>
           <li class="condition">
             <span class="icon-badge"><span class="icon icon--spine-segments" aria-hidden="true"></span></span>
-            <h3 class="condition__title">Artrose da coluna</h3>
+            <h3 class="condition__title">Artrose da coluna (bico de papagaio)</h3>
             <p>Desgaste das articulações da coluna, com dor e perda de mobilidade.</p>
           </li>
           <li class="condition">
@@ -491,7 +716,7 @@
       <div class="container about">
         <div class="about__content">
           <p class="eyebrow">Sobre o médico</p>
-          <h2 class="section__title" id="sobre-titulo">Dr. Márcio Crisanto</h2>
+          <h2 class="section__title" id="sobre-titulo">Dr. Márcio Crisanto <span class="section__title-sub">Ortopedista em Recife com atuação em coluna</span></h2>
           <p class="about__creds">Médico · Ortopedia e Traumatologia · CRM-PE 12253 · RQE 9294</p>
           <p>
             Formado em Medicina pela Universidade de Pernambuco (UPE), fez residência em Ortopedia e
@@ -504,7 +729,7 @@
           </p>
           <p>
             Acompanha de perto a evolução da área, participando de congressos nacionais e internacionais
-            de ortopedia e de cirurgia da coluna, incluindo as técnicas minimamente invasivas.
+            de ortopedia e de cirurgia da coluna, incluindo técnicas minimamente invasivas e endoscópicas da coluna.
           </p>
           <blockquote class="about__quote">
             <p>“Há 20 anos ajudando pessoas por meio da ortopedia. Marido, pai e avô.”</p>
@@ -578,7 +803,7 @@
       <div class="container container--narrow">
         <header class="section__head">
           <p class="eyebrow">Dúvidas frequentes</p>
-          <h2 class="section__title" id="duvidas-titulo">Antes de agendar</h2>
+          <h2 class="section__title" id="duvidas-titulo">Dúvidas frequentes antes da consulta de coluna</h2>
         </header>
 
         <div class="faq">
@@ -616,7 +841,7 @@
         <header class="section__head section__head--center">
           <p class="eyebrow eyebrow--dark">Agendamento</p>
           <h2 class="section__title" id="agendar-titulo">Agende sua consulta em 3 passos</h2>
-          <p class="section__lead">Escolha o local, diga como será o atendimento e envie a mensagem. A recepção responde para confirmar dia e horário.</p>
+          <p class="section__lead">Escolha o local em Boa Viagem, no Paissandu, em Olinda ou no Cabo, diga como será o atendimento e envie a mensagem. A recepção responde para confirmar dia e horário.</p>
         </header>
 
         <ol class="stepper" aria-label="Etapas do agendamento" data-stepper hidden>
@@ -646,9 +871,9 @@
                 <div class="location__info">
                   <p class="location__region">Zona Sul · Boa Viagem</p>
                   <h4 class="location__name">Ortoclínica Boa Viagem</h4>
-                  <p class="location__line"><span class="icon icon--marker" aria-hidden="true"></span>
+                  <p class="location__line location__line--addr"><span class="icon icon--marker" aria-hidden="true"></span>
                     <span>Boa Viagem Medical Center (Hospital Alfa)<br>Av. Visconde de Jequitinhonha, 1144, 4º andar, <span class="nowrap">salas 402 a 404</span><br>Boa Viagem, <span class="nowrap">Recife - PE</span>, <span class="nowrap">51030-020</span></span></p>
-                  <p class="location__line"><span class="icon icon--phone" aria-hidden="true"></span>
+                  <p class="location__line location__line--phone"><span class="icon icon--phone" aria-hidden="true"></span>
                     <span><a href="tel:+558121291402">(81) 2129-1402</a> · <a href="tel:+558130769245">(81) 3076-9245</a></span></p>
                   <p class="location__line location__line--how"><span class="icon icon--whatsapp" aria-hidden="true"></span>
                     <span>Agenda pelo WhatsApp ou por telefone</span></p>
@@ -681,9 +906,9 @@
                 <div class="location__info">
                   <p class="location__region">Zona Sul · Boa Viagem</p>
                   <h4 class="location__name">Clínica de Ortopedia de Boa Viagem</h4>
-                  <p class="location__line"><span class="icon icon--marker" aria-hidden="true"></span>
+                  <p class="location__line location__line--addr"><span class="icon icon--marker" aria-hidden="true"></span>
                     <span>Av. Conselheiro Aguiar, 1733<br>Boa Viagem<br><span class="nowrap">Recife - PE</span>, <span class="nowrap">51111-011</span></span></p>
-                  <p class="location__line"><span class="icon icon--phone" aria-hidden="true"></span>
+                  <p class="location__line location__line--phone"><span class="icon icon--phone" aria-hidden="true"></span>
                     <span><a href="tel:+558139746797">(81) 3974-6797</a></span></p>
                   <p class="location__line location__line--how"><span class="icon icon--phone" aria-hidden="true"></span>
                     <span>Agenda somente por telefone</span></p>
@@ -717,11 +942,11 @@
               <article class="location" data-location="clifor" data-region="olinda" data-name="Clifor Olinda" data-whatsapp="5581982379160" data-phone="558134296165">
                 <div class="location__info">
                   <p class="location__region">Olinda · Bairro Novo</p>
-                  <h4 class="location__name">Clifor</h4>
+                  <h4 class="location__name">Clifor Olinda</h4>
                   <p class="location__sub">Clínica de Fraturas, Ortopedia e Reabilitação de Pernambuco</p>
-                  <p class="location__line"><span class="icon icon--marker" aria-hidden="true"></span>
+                  <p class="location__line location__line--addr"><span class="icon icon--marker" aria-hidden="true"></span>
                     <span>Praça Doze de Março, 36, sala 01<br>Bairro Novo, <span class="nowrap">Olinda - PE</span>, <span class="nowrap">53030-110</span></span></p>
-                  <p class="location__line"><span class="icon icon--phone" aria-hidden="true"></span>
+                  <p class="location__line location__line--phone"><span class="icon icon--phone" aria-hidden="true"></span>
                     <span><a href="tel:+558134296165">(81) 3429-6165</a></span></p>
                   <p class="location__line location__line--how"><span class="icon icon--whatsapp" aria-hidden="true"></span>
                     <span>Agenda pelo WhatsApp ou por telefone</span></p>
@@ -760,9 +985,9 @@
                   <p class="location__region">Zona Norte · Paissandu</p>
                   <h4 class="location__name">Maxiclínicas São Marcos</h4>
                   <p class="location__sub">Rede D'Or · Unidade Paissandu</p>
-                  <p class="location__line"><span class="icon icon--marker" aria-hidden="true"></span>
+                  <p class="location__line location__line--addr"><span class="icon icon--marker" aria-hidden="true"></span>
                     <span>Rua Pacífico dos Santos, 103<br>Paissandu, <span class="nowrap">Recife - PE</span>, <span class="nowrap">52010-030</span></span></p>
-                  <p class="location__line"><span class="icon icon--phone" aria-hidden="true"></span>
+                  <p class="location__line location__line--phone"><span class="icon icon--phone" aria-hidden="true"></span>
                     <span>Central Rede D'Or <a href="tel:+558130033230">(81) 3003-3230</a></span></p>
                   <p class="location__line location__line--how"><span class="icon icon--calendar" aria-hidden="true"></span>
                     <span>Agenda online pela Rede D'Or ou pela central</span></p>
@@ -790,9 +1015,9 @@
                 <div class="location__info">
                   <p class="location__region">Cabo de Santo Agostinho · Centro</p>
                   <h4 class="location__name">Clínica de Saúde do Cabo</h4>
-                  <p class="location__line"><span class="icon icon--marker" aria-hidden="true"></span>
+                  <p class="location__line location__line--addr"><span class="icon icon--marker" aria-hidden="true"></span>
                     <span>Av. Presidente Getúlio Vargas, 974<br>Centro, Cabo de Santo Agostinho - PE, <span class="nowrap">54505-560</span></span></p>
-                  <p class="location__line"><span class="icon icon--phone" aria-hidden="true"></span>
+                  <p class="location__line location__line--phone"><span class="icon icon--phone" aria-hidden="true"></span>
                     <span><a href="tel:+558135181525">(81) 3518-1525</a></span></p>
                   <p class="location__line location__line--how"><span class="icon icon--whatsapp" aria-hidden="true"></span>
                     <span>Agenda pelo WhatsApp ou por telefone</span></p>
@@ -821,9 +1046,9 @@
                 <div class="location__info">
                   <p class="location__region">Cabo de Santo Agostinho</p>
                   <h4 class="location__name">Hospital São Sebastião</h4>
-                  <p class="location__line"><span class="icon icon--marker" aria-hidden="true"></span>
+                  <p class="location__line location__line--addr"><span class="icon icon--marker" aria-hidden="true"></span>
                     <span>Av. Presidente Getúlio Vargas, 864<br>Cabo de Santo Agostinho - PE</span></p>
-                  <p class="location__line"><span class="icon icon--phone" aria-hidden="true"></span>
+                  <p class="location__line location__line--phone"><span class="icon icon--phone" aria-hidden="true"></span>
                     <span><a href="tel:+558135124150">(81) 3512-4150</a></span></p>
                   <p class="location__line location__line--how"><span class="icon icon--phone" aria-hidden="true"></span>
                     <span>Agenda somente por telefone</span></p>

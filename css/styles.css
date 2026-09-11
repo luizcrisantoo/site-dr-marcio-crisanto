@@ -1,4 +1,3 @@
-@import url('variables.css');
 
 /* ==========================================================
    1. RESET / BASE
@@ -752,16 +751,25 @@ button, input, select { font: inherit; color: inherit; }
 .location__info { display: flex; flex-direction: column; gap: 0.7rem; }
 @media (min-width: 768px) {
   @supports (grid-template-rows: subgrid) {
+    /* Cada informação ocupa a sua própria linha da grade, compartilhada com o card vizinho:
+       região, nome, subtítulo, endereço, telefone, forma de agendar, convênios, botões.
+       Assim tudo fica alinhado como numa tabela, e nada é esticado. */
     .location {
       display: grid;
       grid-template-rows: subgrid;
-      grid-row: span 3;
-      row-gap: 0.9rem;
+      grid-row: span 8;
+      row-gap: 0;
       align-content: start;
     }
-    .location__actions { margin-top: 0; align-self: end; }
-    /* Se um card tem menos linhas que o vizinho, o espaço sobrando é dividido entre as linhas em vez de virar um buraco */
-    .location__info { justify-content: space-between; }
+    .location__info { display: contents; }
+    .location__region       { grid-row: 1; margin-bottom: 0.45rem; }
+    .location__name         { grid-row: 2; margin-bottom: 0.7rem; }
+    .location__sub          { grid-row: 3; margin: -0.35rem 0 0.7rem; }
+    .location__line--addr   { grid-row: 4; margin-bottom: 0.7rem; }
+    .location__line--phone  { grid-row: 5; margin-bottom: 0.7rem; }
+    .location__line--how    { grid-row: 6; margin-bottom: 0.9rem; }
+    .location__plans        { grid-row: 7; margin-bottom: 0.9rem; }
+    .location__actions      { grid-row: 8; margin-top: 0; align-self: end; }
   }
 }
 
@@ -791,3 +799,10 @@ button, input, select { font: inherit; color: inherit; }
 }
 .chip__more:hover { background: var(--s2); color: var(--teal-800); }
 .chip__more:focus-visible { outline: 3px solid var(--teal-700); outline-offset: 2px; border-radius: 999px; }
+
+/* Subtítulo dentro de um H2 (SEO: palavra-chave no título sem pesar no visual) */
+.section__title-sub {
+  display: block; margin-top: 0.4rem;
+  font-family: var(--font-primary); font-size: 1rem; font-weight: 500; line-height: 1.4; letter-spacing: 0.01em;
+  color: var(--sec-muted);
+}

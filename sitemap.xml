@@ -3,11 +3,14 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://drmarciocrisanto.com.br/</loc>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://drmarciocrisanto.com.br/assets/images/dr-marcio-crisanto.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://drmarciocrisanto.com.br/assets/images/dr-marcio-crisanto-cirurgia.jpg</image:loc>
     </image:image>
   </url>
 </urlset>
