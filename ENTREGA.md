@@ -74,7 +74,7 @@ Sem JavaScript, cada card abre o WhatsApp direto com a mensagem base + unidade.
 **Domínio:** o site oficial é https://www.drmarciocrisanto.com.br (com www). Canonical, og, schema, sitemap, robots e llms.txt já apontam pra ele, e o _redirects manda a versão sem www e a http pra essa. Vale registrar drmarciocrisanto.med.br (extensão exclusiva de médicos) como alias com 301.
 **Site publicado hoje:** o Search Console mostra "Nenhum arquivo robots.txt" (o Google trata como "pode rastrear tudo", então não bloqueia a indexação). Ao publicar esta versão, o robots.txt passa a existir com a linha do sitemap; depois, enviar https://www.drmarciocrisanto.com.br/sitemap.xml em Sitemaps e usar "Solicitar nova verificação" no relatório de robots.txt.
 
-**Analytics:** tags do GA4 e do Search Console comentadas no `<head>`; evento `clique_agendamento` já disparado em todo clique de WhatsApp/telefone (js/modules/api.js). Ao ativar o GA4, liberar googletagmanager.com na CSP do `_headers`.
+**Analytics:** GA4 ativo (ID G-GRQ0C4XLX9) com Modo de Consentimento: cookies só depois do "Aceitar" no aviso (LGPD); sem aceite, o Google recebe só sinais anônimos sem cookie. Evento `clique_agendamento` com a unidade em `origem` a cada clique de WhatsApp/telefone. No GA4: Administrador > Eventos > marcar `clique_agendamento` como evento-chave (aparece depois do primeiro clique). Página /privacidade/ e link "Preferências de cookies" no rodapé. CSP do _headers já libera o Google Analytics.
 
 ## Créditos
 

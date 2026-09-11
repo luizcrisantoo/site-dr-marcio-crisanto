@@ -7,6 +7,7 @@ import { initScroll } from './modules/scroll.js';
 import { initBooking } from './modules/booking.js';
 import { initPlans } from './modules/plans.js';
 import { initAnalytics } from './modules/api.js';
+import { initConsent } from './modules/consent.js';
 
 function init() {
   document.documentElement.classList.add('js');
@@ -15,6 +16,7 @@ function init() {
   initPlans();
   initBooking();
   initAnalytics();
+  initConsent();
 
   const yearEl = document.querySelector('[data-year]');
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());

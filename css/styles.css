@@ -994,3 +994,37 @@ button, input, select { font: inherit; color: inherit; }
 /* Coluna de leitura centralizada nas páginas de condição (~70 caracteres por linha) */
 .container--read { max-width: calc(70ch + 2.5rem); }
 @media (min-width: 768px) { .container--read { max-width: calc(70ch + 4rem); } }
+
+/* ==========================================================
+   Aviso de cookies (LGPD)
+   ========================================================== */
+.consent {
+  position: fixed; z-index: 120;
+  left: 1rem; right: 1rem; bottom: calc(5.5rem + env(safe-area-inset-bottom));
+  display: grid; gap: 0.75rem;
+  padding: 1rem 1.1rem;
+  background: var(--surface); color: var(--ink);
+  border: 1px solid var(--line); border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  font-size: 0.9rem; line-height: 1.5;
+}
+.consent__text a { color: var(--teal-800); font-weight: 600; }
+.consent__actions { display: flex; gap: 0.5rem; justify-content: flex-end; }
+.consent__actions .btn { min-height: 44px; }
+@media (min-width: 1024px) {
+  .consent { left: 1.5rem; right: auto; bottom: 1.5rem; max-width: 420px; }
+}
+.footer__bottom button.linklike {
+  padding: 0.9rem 0.125rem; margin: 0; border: 0; background: none; cursor: pointer;
+  font: inherit; color: var(--on-dark); font-weight: 600; text-decoration: underline; text-underline-offset: 3px;
+}
+.footer__bottom button.linklike:hover { color: var(--beige); }
+
+/* Títulos de páginas de texto corrido (ex.: política de privacidade) */
+.article h2:not([class]) {
+  margin-top: 2.25rem;
+  font-family: var(--font-heading); font-weight: 600; font-size: 1.75rem; line-height: 1.15;
+  color: var(--graphite-900);
+}
+.article > ul:not([class]) { padding-left: 1.2rem; list-style: disc; }
+.article > ul:not([class]) li + li { margin-top: 0.4rem; }
