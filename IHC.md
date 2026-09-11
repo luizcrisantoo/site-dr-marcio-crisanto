@@ -39,6 +39,7 @@ Teste automático: axe-core (WCAG 2 A e AA), 0 violações em 375px e 1440px.
 - **Divulgação progressiva:** cada card mostra no máximo 2 linhas de convênios e um botão "+N convênios" para ver o resto; cards vizinhos ficam com a mesma altura e sem vazio
 - **Gestalt (proximidade e semelhança):** endereço, telefone e convênios agrupados dentro de cada card; seções separadas por degraus de cor bem visíveis
 - **Hierarquia visual:** um CTA principal por tela, secundários em estilo contornado
+- **Prova social com fonte independente:** faixa "Avaliações de pacientes" na seção Sobre (e na /sobre/), com links para as avaliações reais no Google e no Doctoralia; fica no momento em que o paciente avalia quem é o médico, em botões contornados para não competir com o "Agendar consulta", e sem copiar textos, notas ou estrelas
 
 ## Pontos que dependem de conteúdo (não de código)
 

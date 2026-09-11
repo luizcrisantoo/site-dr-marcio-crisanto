@@ -50,7 +50,7 @@ Sem JavaScript, cada card abre o WhatsApp direto com a mensagem base + unidade.
 ## Ajustes por causa do CFM (Resolução 2.336/2023)
 
 - Especialidade exibida como "Ortopedia e Traumatologia · RQE 9294", com a palavra "Médico" e CRM-PE, no hero, no Sobre e no rodapé. "Coluna" aparece como área de atuação, não como especialidade, porque o RQE é de Ortopedia e Traumatologia. **Se ele tiver RQE de área de atuação em coluna, vale incluir**
-- Sem promessa de resultado, sem superlativo, sem preço, sem antes/depois e sem depoimentos
+- Sem promessa de resultado, sem superlativo, sem preço, sem antes/depois e sem depoimentos (as avaliações de pacientes aparecem só como links para o Google e o Doctoralia, sem copiar o conteúdo)
 - Congressos entram como atualização profissional (permitido)
 - Bloco de sinais de alerta e FAQ com caráter educativo
 
@@ -75,6 +75,16 @@ Sem JavaScript, cada card abre o WhatsApp direto com a mensagem base + unidade.
 **Site publicado hoje:** o Search Console mostra "Nenhum arquivo robots.txt" (o Google trata como "pode rastrear tudo", então não bloqueia a indexação). Ao publicar esta versão, o robots.txt passa a existir com a linha do sitemap; depois, enviar https://www.drmarciocrisanto.com.br/sitemap.xml em Sitemaps e usar "Solicitar nova verificação" no relatório de robots.txt.
 
 **Analytics:** GA4 ativo (ID G-GRQ0C4XLX9) com Modo de Consentimento: cookies só depois do "Aceitar" no aviso (LGPD); sem aceite, o Google recebe só sinais anônimos sem cookie. Evento `clique_agendamento` com a unidade em `origem` a cada clique de WhatsApp/telefone. No GA4: Administrador > Eventos > marcar `clique_agendamento` como evento-chave (aparece depois do primeiro clique). Página /privacidade/ e link "Preferências de cookies" no rodapé. CSP do _headers já libera o Google Analytics.
+
+## Avaliações de pacientes (Google e Doctoralia)
+
+- **Onde ficou:** faixa "Avaliações de pacientes" dentro da seção Sobre da home, logo abaixo do texto e da foto do médico (antes de Congressos), e uma versão igual na /sobre/, abaixo da citação e do Instagram. Dois botões contornados, "Ver avaliações no Google" e "Ver avaliações no Doctoralia", e um convite discreto para quem já é paciente ("Já se consultou com o Dr. Márcio? Sua avaliação ajuda outros pacientes.") com os mesmos dois links. Não há benefício em troca da avaliação.
+- **Por que ali:** é o ponto em que o paciente está decidindo se confia no médico (formação e trajetória), então a prova social reforça a autoridade sem competir com o botão principal de agendar, sem aumentar o hero nem empurrar o agendamento no celular, e sem levar o paciente para fora do site bem na hora de agendar.
+- **Sem cópia de avaliações:** o site não mostra textos, nomes de pacientes, nota, estrelas nem quantidade de avaliações, e o JSON-LD não tem aggregateRating nem review. Motivos: os textos pertencem aos autores; o Google só permite exibir avaliações dele fora da plataforma pela API oficial, com atribuição; números copiados ficariam desatualizados; e o CFM (Resolução 2.336/2023) veda depoimentos e superlativos na publicidade médica. Só há links para as avaliações reais nas plataformas.
+- **Analytics:** clique nesses links gera o evento GA4 `clique_avaliacoes` com `plataforma` (google ou doctoralia), vindo de `data-origem="avaliacoes-google"` / `"avaliacoes-doctoralia"` (js/modules/api.js). O evento `clique_agendamento` continua igual.
+- **Ícone:** comments.png (Icons8, estilo Windows 10, monocromático). O download direto de img.icons8.com foi bloqueado pela rede do ambiente; se preferir o estilo iOS dos outros ícones, baixar https://img.icons8.com/ios/100/000000/comments.png e substituir o arquivo em assets/icons.
+- [ ] **Pendência com o Dr. Márcio:** o perfil do Doctoralia diz que ele "só aceita particulares", o que contradiz os convênios do site e pode afastar pacientes de plano que chegam pelas avaliações. Pedir para ele corrigir o perfil (convênios por unidade) no painel do Doctoralia.
+- Versão dos arquivos: styles.css e script.js em ?v=14 em todas as páginas.
 
 ## Créditos
 
@@ -104,3 +114,5 @@ Com as páginas do Cabo e do Sobre (versão dos arquivos ?v=13 em todas as pági
 **Falta criar (fase 1):** /dor-lombar/ e /cirurgia-de-coluna/, que dependem da revisão do texto médico pelo Dr. Márcio. Depois: páginas de Boa Viagem e Paissandu, dor cervical, estenose do canal vertebral, escoliose e artrose da coluna. Cada nova página entra no sitemap.xml, no llms.txt e ganha link a partir da home e das páginas relacionadas.
 
 Off-page: pedir link para o site no perfil dele no site da Clifor (de preferência apontando para /ortopedista-coluna-olinda/), no Instagram da Ortoclínica, no Doctoralia e na bio do Instagram; manter nome, endereço e telefone iguais em todos os diretórios.
+
+**Avaliações (atualizado):** por enquanto o bloco só leva ao Google (link de compartilhamento do perfil dele). O Doctoralia foi retirado porque o perfil está desatualizado; o link ficou comentado no HTML da home e do /sobre/ para reativar quando o perfil for corrigido.

@@ -1,5 +1,5 @@
 /**
- * api.js · integrações externas: WhatsApp, telefone e Analytics.
+ * api.js · integrações externas: WhatsApp, telefone e Analytics (agendamento e avaliações).
  * Ponto de extensão: se no futuro houver agenda online / backend, conectar aqui.
  */
 export const BASE_MESSAGE = 'Olá, vim através do site do Dr. Márcio Crisanto e gostaria de agendar uma consulta com ele.';
@@ -44,9 +44,20 @@ export function trackContact(origin) {
   }
 }
 
+/** Evento de clique nos links de avaliações (Google / Doctoralia) para o GA4 */
+export function trackReviews(platform) {
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'clique_avaliacoes', { plataforma: platform || 'geral' });
+  }
+}
+
 export function initAnalytics() {
   document.addEventListener('click', (event) => {
+    if (!(event.target instanceof Element)) return;
     const link = event.target.closest('a[href*="wa.me"], a[href^="tel:"]');
     if (link) trackContact(link.dataset.origem || link.closest('[data-location]')?.dataset.location);
+
+    const review = event.target.closest('a[data-origem^="avaliacoes-"]');
+    if (review) trackReviews(review.dataset.origem.slice('avaliacoes-'.length));
   });
 }

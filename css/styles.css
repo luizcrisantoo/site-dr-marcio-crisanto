@@ -93,6 +93,7 @@ button, input, select { font: inherit; color: inherit; }
 .icon--broken-bone { --i: url('../assets/icons/broken-bone.png'); }
 .icon--chevron   { --i: url('../assets/icons/expand-arrow.png'); }
 .icon--up        { --i: url('../assets/icons/expand-arrow.png'); transform: rotate(180deg); }
+.icon--comments  { --i: url('../assets/icons/comments.png'); }
 
 /* Botões */
 .btn {
@@ -1055,3 +1056,63 @@ button, input, select { font: inherit; color: inherit; }
 .profile-quote { margin-top: 2rem; }
 .profile-quote .about__quote { margin-top: 0; }
 .profile-quote__source { margin-top: 0.5rem; font-size: 0.85rem; color: var(--sec-muted); }
+
+/* ==========================================================
+   Avaliações de pacientes (home, seção Sobre, e /sobre/)
+   Só links para as plataformas: sem textos, nomes, notas ou estrelas.
+   Centralizado no celular e no tablet; na home, em faixa horizontal a partir de 1024px.
+   ========================================================== */
+.reviews {
+  display: grid; justify-items: center; gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.5rem 1.25rem 1.1rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+.about > .reviews { grid-column: 1 / -1; margin-top: 0; }
+.reviews__badge { background: var(--s2); }
+.reviews__title { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 600; line-height: 1.15; color: var(--graphite-900); }
+.reviews__text p { margin-top: 0.4rem; max-width: 42rem; color: var(--ink-muted); line-height: 1.55; }
+.reviews__actions { display: flex; flex-direction: column; gap: 0.6rem; width: 100%; }
+.reviews__actions .btn { background: var(--surface); }
+.reviews__actions .btn:hover { background: var(--teal-700); }
+.reviews__actions .btn .icon { font-size: 0.85em; vertical-align: 0; }
+.reviews__invite {
+  display: flex; flex-direction: column; align-items: center;
+  width: 100%; padding-top: 0.75rem;
+  border-top: 1px dashed var(--line);
+  font-size: 0.9rem; line-height: 1.45; color: var(--ink-muted);
+}
+.reviews__invite-links { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 1.25rem; }
+.reviews__invite-links a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  font-weight: 600; color: var(--teal-800);
+  text-decoration: underline; text-decoration-color: rgba(31, 82, 82, 0.35); text-underline-offset: 4px;
+}
+.reviews__invite-links a:hover { text-decoration-color: currentColor; }
+
+@media (min-width: 560px) {
+  .reviews__actions { flex-direction: row; flex-wrap: wrap; justify-content: center; width: auto; }
+  .reviews__actions .btn { flex: 0 1 auto; white-space: nowrap; }
+}
+@media (min-width: 768px) {
+  .reviews { padding: 1.75rem 2rem 1.1rem; }
+  .reviews__invite { flex-direction: row; flex-wrap: wrap; justify-content: center; column-gap: 1.25rem; }
+}
+@media (min-width: 1024px) {
+  .about { row-gap: 2.75rem; }
+  /* Faixa horizontal na home: ícone | título e texto | botões empilhados; convite em linha abaixo */
+  .reviews--wide {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center; justify-items: start;
+    column-gap: 1.5rem; row-gap: 1.1rem;
+    padding: 1.6rem 2rem 0.9rem;
+    text-align: left;
+  }
+  .reviews--wide .reviews__badge { align-self: start; }
+  .reviews--wide .reviews__actions { flex-direction: column; flex-wrap: nowrap; align-self: center; }
+  .reviews--wide .reviews__actions .btn { justify-content: space-between; }
+  .reviews--wide .reviews__invite { grid-column: 1 / -1; }
+}

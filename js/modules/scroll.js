@@ -2,7 +2,7 @@
  * scroll.js · header com sombra, animações on-scroll, voltar ao topo
  * e barra de agendamento do mobile (some quando a seção de agendamento está visível)
  */
-const REVEAL_SELECTOR = '.section__head, .condition, .step, .alert-box, .about__media, .about__content, .congress, .faq__item';
+const REVEAL_SELECTOR = '.section__head, .condition, .step, .alert-box, .about__media, .about__content, .reviews, .congress, .faq__item';
 
 function observeReveal() {
   const items = document.querySelectorAll(REVEAL_SELECTOR);

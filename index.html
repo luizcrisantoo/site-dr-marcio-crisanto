@@ -35,7 +35,7 @@
   <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/variables.css?v=13">
-  <link rel="stylesheet" href="/css/styles.css?v=13">
+  <link rel="stylesheet" href="/css/styles.css?v=15">
 
   <!-- Google Search Console: verificação por meta tag; pegar em search.google.com/search-console -->
   <!-- <meta name="google-site-verification" content="CODIGO"> -->
@@ -515,7 +515,7 @@
   ]
 }
   </script>
-  <script type="module" src="/js/script.js?v=13"></script>
+  <script type="module" src="/js/script.js?v=14"></script>
   <link rel="modulepreload" href="/js/modules/api.js">
   <link rel="modulepreload" href="/js/modules/menu.js">
   <link rel="modulepreload" href="/js/modules/scroll.js">
@@ -749,6 +749,26 @@
           </picture>
           <img class="about__mark" src="/assets/images/logo-mark.webp" alt="" width="58" height="82" loading="lazy">
         </figure>
+
+        <!-- Avaliações de pacientes: só links para as plataformas (sem copiar textos, nomes, notas ou estrelas; ver ENTREGA.md) -->
+        <div class="reviews reviews--wide">
+          <span class="icon-badge reviews__badge"><span class="icon icon--comments" aria-hidden="true"></span></span>
+          <div class="reviews__text">
+            <h3 class="reviews__title" id="avaliacoes-titulo">Avaliações de pacientes</h3>
+            <p>Veja o que pacientes que já passaram pela consulta escreveram no Google.</p>
+          </div>
+          <!-- Doctoralia: reativar quando o perfil estiver atualizado (https://www.doctoralia.com.br/marcio-adriano-paiva-crisanto/ortopedista-traumatologista/recife) -->
+          <div class="reviews__actions">
+            <a class="btn btn--ghost" href="https://share.google/67AGYJu0GBD1yU73U" target="_blank" rel="noopener noreferrer" data-origem="avaliacoes-google">
+              Ver avaliações no Google<span class="visually-hidden"> (abre em nova aba)</span><span class="icon icon--forward" aria-hidden="true"></span></a>
+          </div>
+          <p class="reviews__invite">
+            <span>Já se consultou com o Dr. Márcio? Sua avaliação ajuda outros pacientes.</span>
+            <span class="reviews__invite-links">
+              <a href="https://share.google/67AGYJu0GBD1yU73U" target="_blank" rel="noopener noreferrer" data-origem="avaliacoes-google">Avaliar no Google<span class="visually-hidden"> (abre em nova aba)</span></a>
+            </span>
+          </p>
+        </div>
       </div>
     </section>
 
